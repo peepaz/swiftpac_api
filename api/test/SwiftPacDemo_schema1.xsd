@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://wsdl.example.org/"
+	xmlns:tns="http://wsdl.example.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xs:element name="myrate" type ="tns:myrate"/>
+
+	<xs:element name="getDate" type="tns:getDate" />
+
+	<xs:element name="getDateResponse" type="tns:getDateResponse" />
+
+	<xs:element name="getRate" type="tns:getRate" />
+
+	<xs:element name="getRateResponse" type="tns:getRateResponse" />
+
+	<xs:element name="sendAck" type="tns:sendAck" />
+
+	<xs:element name="sendAckResponse" type="tns:sendAckResponse" />
+
+	<xs:complexType name="sendAck">
+		<xs:sequence>
+			<xs:element name="message" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="sendAckResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="getRate">
+		<xs:sequence>
+			<xs:element name="carrier" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="getRateResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+			<xs:element name="rateone" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="getDate">
+		<xs:sequence />
+	</xs:complexType>
+
+	<xs:complexType name="getDateResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="myrate">
+		<xs:sequence>
+			<xs:element name="rate0" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="rate1" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="getSwiftPacRate">
+		<xs:sequence>
+			<xs:element name="regular" type="xs:string"></xs:element>
+			<xs:element name="express" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="getSwiftPacRate" type="tns:getSwiftPacRate"></xs:element>
+</xs:schema>
+

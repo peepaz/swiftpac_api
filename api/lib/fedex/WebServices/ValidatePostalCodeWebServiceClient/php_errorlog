@@ -1,0 +1,18 @@
+[10-Sep-2016 18:49:48 CST6CDT] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from '../wsdl/CountryService_v4.wsdl' : failed to load external entity "../wsdl/CountryService_v4.wsdl"
+ in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 14
+[10-Sep-2016 18:49:48 CST6CDT] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from '../wsdl/CountryService_v4.wsdl' : failed to load external entity "../wsdl/CountryService_v4.wsdl"
+ in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5:14
+Stack trace:
+#0 /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5(14): SoapClient->SoapClient('../wsdl/Country...', Array)
+#1 {main}
+  thrown in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 14
+[10-Sep-2016 18:53:43 CST6CDT] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from '../wsdl/CountryService_v4.wsdl' : failed to load external entity "../wsdl/CountryService_v4.wsdl"
+ in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 14
+[10-Sep-2016 18:53:43 CST6CDT] PHP Fatal error:  Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from '../wsdl/CountryService_v4.wsdl' : failed to load external entity "../wsdl/CountryService_v4.wsdl"
+ in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5:14
+Stack trace:
+#0 /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5(14): SoapClient->SoapClient('../wsdl/Country...', Array)
+#1 {main}
+  thrown in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 14
+[10-Sep-2016 18:58:17 CST6CDT] PHP Fatal error:  SOAP-ERROR: Encoding: Element 'Major' has fixed value '5' (value '4' is not allowed) in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 52
+[10-Sep-2016 18:59:11 CST6CDT] PHP Fatal error:  SOAP-ERROR: Encoding: Element 'Minor' has fixed value '1' (value '0' is not allowed) in /home/vincyavi/public_html/swiftpac_api/api/lib/fedex/WebServices/ValidatePostalCodeWebServiceClient/ValidatePostalCodeWebServiceClient.php5 on line 52

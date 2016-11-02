@@ -1,0 +1,9 @@
+[16-Jul-2016 08:02:30 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: logo_pb.png' in /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/fpdf.php(1261): FPDF->Error('Can't open imag...')
+#1 /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/fpdf.php(885): FPDF->_parsepng('logo_pb.png')
+#2 /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/tutorial/tuto2.php(10): FPDF->Image('logo_pb.png', 10, 8, 33)
+#3 /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/fpdf.php(334): PDF->Header()
+#4 /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/tutorial/tuto2.php(36): FPDF->AddPage()
+#5 {main}
+  thrown in /home/vincyavi/public_html/swiftpac_api/api/lib/fpdf/fpdf.php on line 271

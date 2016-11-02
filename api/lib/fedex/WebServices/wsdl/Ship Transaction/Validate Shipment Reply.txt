@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <env:Body xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <v17:ShipmentReply xmlns:v17="http://fedex.com/ws/ship/v17">
+         <v17:HighestSeverity>SUCCESS</v17:HighestSeverity>
+         <v17:Notifications>
+            <v17:Severity>SUCCESS</v17:Severity>
+            <v17:Source>ship</v17:Source>
+            <v17:Code>0000</v17:Code>
+            <v17:Message>Success</v17:Message>
+            <v17:LocalizedMessage>Success</v17:LocalizedMessage>
+         </v17:Notifications>
+         <v17:TransactionDetail>
+            <v17:CustomerTransactionId>Input Your Information</v17:CustomerTransactionId>
+         </v17:TransactionDetail>
+         <v17:Version>
+            <v17:ServiceId>ship</v17:ServiceId>
+            <v17:Major>17</v17:Major>
+            <v17:Intermediate>0</v17:Intermediate>
+            <v17:Minor>0</v17:Minor>
+         </v17:Version>
+      </v17:ShipmentReply>
+   </env:Body>
+</soapenv:Envelope>

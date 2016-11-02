@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="SwiftPacShippingWDSL"
+	targetNamespace="http://www.example.org/SwiftPacShippingWDSL/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.example.org/SwiftPacShippingWDSL/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.example.org/SwiftPacShippingWDSL/">
+
+
+
+
+
+			<xsd:complexType name="Address">
+				<xsd:sequence minOccurs="0" maxOccurs="1">
+					<xsd:element name="company" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="attn" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="addressLine1" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="addressLine2" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="state" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="zip" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="city" type="xsd:string" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="countryName" type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="countryCode" type="xsd:string" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="residentialFlag" type="xsd:boolean" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="LocationService">
+				<xsd:sequence>
+					<xsd:element name="inside" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="stairs" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="liftGate" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="forkLift" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="keepFrozen" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="perishable" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="saturday" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="holiday" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="Package">
+				<xsd:sequence>
+					<xsd:element name="shipToAttn" type="xsd:string"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="packagingType" type="xsd:string"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="contentDescription"
+						type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="packageClass" type="xsd:string"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="length" type="xsd:double"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="width" type="xsd:double"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="height" type="xsd:double"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="weight" type="xsd:double"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="referenceNumber"
+						type="xsd:string" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="notifiedValue" type="xsd:double"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="hazardous" type="xsd:boolean"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="itemQty" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="PackageList">
+				<xsd:sequence>
+					<xsd:element name="packages" type="tns:Package" maxOccurs="unbounded" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="Shipment">
+				<xsd:sequence>
+					<xsd:element name="shipFrom" type="tns:Address" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="pickupLocationService" type="tns:LocationService" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="shipTo" type="tns:Address" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="deliveryLocationService" type="tns:LocationService" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="returnTo" type="tns:Address" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="packageList" type="tns:PackageList" maxOccurs="1" minOccurs="1"></xsd:element>
+					<xsd:element name="fragileFlag" type="xsd:boolean" maxOccurs="1" minOccurs="1"></xsd:element>
+					<xsd:element name="declaredValue" type="xsd:double" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="carrerId" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="driverInstructions" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="serviceCode" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="weightUnit" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="dimensionsUnit" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element name="shipDate" type="xsd:dateTime" maxOccurs="1" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="ShipmentList">
+				<xsd:sequence>
+					<xsd:element name="shipment" type="tns:Shipment" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RequestDetail">
+				<xsd:sequence>
+					<xsd:element name="shipmentList" type="tns:ShipmentList" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="Rate">
+				<xsd:sequence>
+					<xsd:element name="requestDetail" type="tns:RequestDetail" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RateRequest">
+				<xsd:sequence>
+					<xsd:element name="rate" type="tns:Rate" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+
+
+			<xsd:complexType name="SwiftPacRate">
+				<xsd:sequence maxOccurs="1" minOccurs="0">
+					<xsd:element name="rateRequest" type="tns:RateRequest" maxOccurs="1" minOccurs="1"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="FeeDetails">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"></xsd:element>
+					<xsd:element name="charge" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="Fee">
+				<xsd:sequence>
+					<xsd:element name="feeDetails" type="tns:FeeDetails" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="ShipmentCharges">
+				<xsd:sequence>
+					<xsd:element name="rate" type="xsd:double" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="baseRate" type="xsd:double" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="fees" type="tns:Fee" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="Service">
+				<xsd:sequence>
+					<xsd:element name="carrier" type="xsd:string"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="serviceCode" type="xsd:string"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="serviceDesc" type="xsd:string"
+						maxOccurs="1" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="estimatedDeliveryDate" type="xsd:dateTime"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="estimatedDeliveryTime" type="xsd:string"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="guaranteedService"
+						type="xsd:boolean" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="shipmentCharges"
+						type="tns:ShipmentCharges" maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="transitTime" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="ServiceRateResult">
+				<xsd:sequence>
+					<xsd:element name="service" type="tns:Service"
+						maxOccurs="unbounded" minOccurs="0">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RateResult">
+				<xsd:sequence>
+					<xsd:element name="serviceList" type="tns:Service"
+						maxOccurs="unbounded" minOccurs="0">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RateResponse">
+				<xsd:sequence>
+					<xsd:element name="rateResult" type="tns:RateResult"
+						maxOccurs="1" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="errors" type="tns:Error"
+						maxOccurs="unbounded" minOccurs="0">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SwiftPacRateResponse">
+				<xsd:sequence>
+					<xsd:element name="rateResponse" type="tns:RateResponse" maxOccurs="1" minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="SwiftPacRate" type="tns:SwiftPacRate">
+
+			</xsd:element>
+			<xsd:element name="SwiftPacRateResponse"
+				type="tns:SwiftPacRateResponse">
+
+			</xsd:element>
+            <xsd:complexType name="Error">
+            	<xsd:sequence>
+            		<xsd:element name="errorDetails"
+            			type="tns:ErrorDetails" maxOccurs="1" minOccurs="0">
+            		</xsd:element>
+            	</xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:complexType name="ErrorDetails">
+            	<xsd:sequence>
+            		<xsd:element name="type" type="xsd:string"
+            			maxOccurs="1" minOccurs="0">
+            		</xsd:element>
+            		<xsd:element name="message" type="xsd:string"
+            			maxOccurs="1" minOccurs="0">
+            		</xsd:element>
+            		<xsd:element name="nonce" type="xsd:string"
+            			maxOccurs="1" minOccurs="0">
+            		</xsd:element>
+            		<xsd:element name="digestRealm" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            	</xsd:sequence>
+            </xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="MyRateRequest">
+		<wsdl:part name="parameters" element="tns:MyRate"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="MyRateResponse">
+		<wsdl:part name="parameters" element="tns:MyRateResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="SwiftPacRateRequest">
+		<wsdl:part name="parameters" element="tns:SwiftPacRate"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="SwiftPacRateResponse">
+		<wsdl:part name="parameters" element="tns:SwiftPacRateResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AuthenticateRequestRequest">
+		<wsdl:part name="parameters" element="tns:AuthenticateRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AuthenticateRequestResponse">
+		<wsdl:part name="parameters" element="tns:AuthenticateRequestResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="SwiftPacShippingWSDLPortType">		<wsdl:operation name="SwiftPacRate">			<wsdl:input message="tns:SwiftPacRateRequest"></wsdl:input>			<wsdl:output message="tns:SwiftPacRateResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SwiftPacShippingWSDLPortBinding"
+		type="tns:SwiftPacShippingWSDLPortType">
+
+
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SwiftPacRate">
+
+			<soap:operation
+				soapAction="http://www.example.org/SwiftPacShippingWDSL/SwiftPacRate" />
+			<wsdl:input>
+
+
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:binding>
+	<wsdl:service name="SwiftPacShippingWDSL">
+		<wsdl:port name="SwiftPacShippingWSDLPort" binding="tns:SwiftPacShippingWSDLPortBinding">
+			<soap:address
+				location="http://testapi.vincyaviation.com/api/SwiftPacShippingAPI.php" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

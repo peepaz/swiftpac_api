@@ -1,0 +1,2167 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Warehouse</title>
+<link href="../../control.css" rel="stylesheet" type="text/css">
+<link type="text/css" href="/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		// Accordion
+		$("#accordion").accordion({ header: "h3" });
+	
+		// Tabs
+		$('#tabs').tabs();
+	
+
+		// Dialog			
+		$('#dialog').dialog({
+			autoOpen: false,
+			width: 600,
+			buttons: {
+				"Ok": function() { 
+					$(this).dialog("close"); 
+				}, 
+				"Cancel": function() { 
+					$(this).dialog("close"); 
+				} 
+			}
+		});
+				
+		// Dialog Link
+		$('#dialog_link').click(function(){
+			$('#dialog').dialog('open');
+			return false;
+		});
+
+		// Datepicker
+		$( "#datepicker" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+						
+		$( "#datepicker1" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+						
+		$( "#datepicker2" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker3" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker4" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker5" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker6" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker7" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker8" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker9" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker10" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker11" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker12" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker13" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+		$( "#datepicker14" ).datepicker({
+			showOn: "button",
+			buttonImage: "/icons/calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			dateFormat: "yy/mm/dd",
+		});
+
+
+		// Slider
+		$('#slider').slider({
+			range: true,
+			values: [17, 67]
+		});
+				
+		// Progressbar
+		$("#progressbar").progressbar({
+			value: 20 
+		});
+				
+		//hover states on the static widgets
+		$('#dialog_link, ul#icons li').hover(
+			function() { $(this).addClass('ui-state-hover'); }, 
+			function() { $(this).removeClass('ui-state-hover'); }
+		);
+				
+	});
+</script>
+<style type="text/css">
+	/*demo page css*/
+	body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 20px;}
+	.demoHeaders { margin-top: 2em; }
+	#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+	#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+	ul#icons {margin: 0; padding: 0;}
+	ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+	ul#icons span.ui-icon {float: left; margin: 0 4px;}
+</style>	
+
+<script src="../../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="../../SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" />
+
+	<style type="text/css">
+	html{
+		height:100%;
+	}
+	.clear{
+		clear:both;
+	}
+	
+	#mainContainer{
+		width:760px;
+		text-align:left;
+		margin:0 auto;
+		background-color: #FFF;
+		border-left:1px solid #000;
+		border-right:1px solid #000;
+		height:100%;
+	}
+	
+	#topBar{
+		width:760px;
+		height:100px;
+	}
+	#leftMenu{
+		width:200px;
+		padding-left:10px;
+		padding-right:10px;
+		float:left;
+	}
+	#mainContent{
+		width: 520px;
+		padding-right:10px;	
+		float:left;
+	}
+	/*
+	General rules
+	*/
+
+	#dhtmlgoodies_slidedown_menu li{
+		list-style-type:none;
+		position:relative;
+	}
+	#dhtmlgoodies_slidedown_menu ul{
+		margin:0px;
+		padding:5px;
+		position:relative;
+
+	}
+
+	#dhtmlgoodies_slidedown_menu div{
+		margin:0px;
+		padding:0px;
+	}
+	/* 	Layout CSS */
+	#dhtmlgoodies_slidedown_menu{		
+		width:205px;	
+	}
+
+	/* All A tags - i.e menu items. */
+	#dhtmlgoodies_slidedown_menu a{
+		color: #000;
+		text-decoration:none;	
+		display:block;
+		clear:both;
+		width:170px;	
+		padding-left:2px;	
+
+	}
+	
+	/*
+	A tags 
+	*/
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth1{	/* Main menu items */
+		margin-top:1px;
+		border-bottom:1px solid #000;
+		font-weight:bold;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth2{	/* Sub menu items */
+		margin-top:1px;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth3{	/* Sub menu items */
+		margin-top:1px;
+		font-style:italic;
+		color:blue;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4{	/* Sub menu items */
+		margin-top:1px;
+		color:red;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth5{	/* Sub menu items */
+		margin-top:1px;
+	}
+
+	/* UL tags, i.e group of menu utems. 
+	It's important to add style to the UL if you're specifying margins. If not, assign the style directly
+	to the parent DIV, i.e. 
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1
+	
+	instead of 
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul
+	*/
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul{
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv2 ul{
+		margin-left:5px;
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv3 ul{
+		margin-left:10px;
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4 ul{
+		margin-left:15px;
+		padding:1px;
+	}
+	
+	</style>
+	
+<script language="JavaScript">
+<!--
+
+// Kaosweaver Calendar Settings - do not remove
+// by Paul Davis - http://www.kaosweaver.com
+// KW_lang[English]
+// KW_order[2,0,1]
+// KW_del1[/]
+// KW_del2[/]
+// KW_dd[true]
+// KW_cWidth[170]
+// KW_fd[-1]
+
+var sDate = new Array();
+var mName = new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+var wName = new Array("Mo","Tu","We","Th","Fr","Sa","Su")
+var cFontName = "Arial, Helvetica, sans-serif;"
+var KW_color = new Array("#000000","#ffcccc","#ccccff","#ffffff","#ccffcc","#f3f3f3","#FFFFFF","#CCCCCC")
+var KW_cl=0;
+var KW_od=-1;
+var KW_tmo=0;
+var KW_cWidth=170;
+var KW_fd=-1;
+var KW_ss=0;
+var KW_sw=0;
+var KW_daysback=0;
+var KW_limitOld=0;
+var descx=-1;
+var descy=-1;
+var bwNN=(document.captureEvents)?1:0;
+function popmousemove(e){descx=(bwNN)?e.pageX:event.x;descy=(bwNN)?e.pageY:event.y}
+function KW_mouseInit(){
+	if(bwNN)document.captureEvents(Event.MOUSEMOVE);document.onmousemove=popmousemove;
+}
+function m_class(m,d,y) { 
+	this.month=m;this.day=d;this.year=y;this.output=this.year+"/"+this.month+"/"+this.day;
+	var kd=new Date();this.special=checkDates(this.month,this.day,this.year)
+	this.today=((kd.getMonth()+1)==this.month && kd.getDate()==this.day && kd.getFullYear()==this.year)
+	var td=new Date(this.year, (this.month-1), this.day+KW_od);this.past=(KW_od==-1)?0:(kd>td)
+	var tf=new Date(kd.getFullYear(),kd.getMonth(),kd.getDate()+KW_fd);
+	var d1=new Date(this.year, (this.month-1), this.day);this.old=(KW_limitOld==1 && (kd>d1))?1:0
+	this.future=(KW_fd==-1)?0:(tf<d1);this.ss=(this.special && KW_ss);kd.setDate(kd.getDate()-KW_daysback)
+	this.display=(this.past || this.future || this.ss || this.old);
+}
+
+// Kaosweaver End of Calendar Settings - do not remove
+
+
+
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function checkDates(m1,d1,y1) { //v2.1.5
+	var rStr=false;for(var i=0;i<sDate.length;i++) {var tDate=sDate[i].split(",");
+		if (tDate[2]=="*" || tDate[2]==y1) {if (tDate[1]==d1 && tDate[0]==m1)	rStr=true;
+		}}return rStr;
+}
+
+function KW_doCalendar(obj,E,m,y) { //v2.6.0
+  var d=new Date();f=0;d.setDate(1);if (!m && m!=0) {m=d.getMonth();f=KW_cl}
+  if (f==1 && MM_findObj('KW_selectedMonth').value!=-1)
+  m=MM_findObj('KW_selectedMonth').value-1;d.setMonth(m);
+  if (!y) y=d.getFullYear();if (f==1 && MM_findObj('KW_selectedYear').value!=-1)
+  y=MM_findObj('KW_selectedYear').value;d.setFullYear(y);dy=d.getDay();if (!E) E=0;
+  if(E==1)dy=(dy==0)?6:dy-1;dP=new Date();dP.setDate(1);dP.setMonth(m);dP.setDate(0);
+  pStart=dP.getDate()-dy+1;dStr=new Array();for (i=pStart;i<dP.getDate()+1;i++) { tmo=(KW_tmo)?"":i;
+  tMonth=(m==0)?"12":m;tYear=(m==0)?y-1:y;dStr[dStr.length]=new m_class(tMonth,tmo,tYear);
+  }EOM=false;for (i=1;!EOM;i++){d.setDate(i);if (m!=d.getMonth()) EOM=true; else {
+  dStr[dStr.length]=new m_class((Number(m)+1),i,y);}}cnt=1;si=0;
+  if(E==1)si=(d.getDay()==0)?6:d.getDay()-1;else si=d.getDay();	for (i=si;i<7;i++) {
+  tMonth=(m==11)?"1":Number(m)+2;tYear=(m==11)?Number(y)+1:y; tmo=(KW_tmo)?"":cnt;
+  dStr[dStr.length]=new m_class(tMonth,tmo,tYear); cnt++;}pM=(m==0)?11:m-1;
+  pY=(m==0)?y-1:y;nM=(m==11)?0:Number(m)+1;nY=(m==11)?Number(y)+1:y;
+  wStr="<ht"+""+"ml><he"+""+"ad><st"+""+"yle type=\"text/css\"><!--  body { background-color: "+KW_color[6]+"}\ntd {  font-family: "+cFontName+" font-size: 12px; }\n.tblHdr { font-weight: bold; color: "+KW_color[0]+"; background-color: "+KW_color[6]+" }\n.subTbl{ color: "+KW_color[0]+"; background-color: "+KW_color[7]+";  text-align: center}-->\n</st"+""+"yle>\n<ti"+""+"tle>"+mName[m]+", "+y+"</ti"+""+"tle>\n</he"+""+"ad>\n<bo"+""+"dy  topmargin=\"0\" marginwidth=\"0\" marginheight=\"0\" leftmargin=\"0\" onLoad=\"window.focus()\">\n<table width=\"100%\" border=\"0\" cellspacing=\"0\">\n<tr>\n<td bgcolor=\""+KW_color[6]+"\">\n<table width=\"100%\" border=0>\n"
+  wStr+="<tr>\n<td align=center bgcolor=\""+KW_color[6]+"\" class=\"tblHdr\" colspan=\"4\"><a href=\"javascript:window.opener.KW_doCalendar('"+obj+"',"+E+",'"+pM+"','"+pY+"');\" class=\"tblHdr\">&laquo</a>&nbsp;&nbsp;"+mName[m]+"&nbsp;&nbsp;<a href=\"javascript:window.opener.KW_doCalendar('"+obj+"',"+E+",'"+nM+"','"+nY+"');\"  class=\"tblHdr\">&raquo</a></td>\n<td colspan=3 align=center class=\"tblHdr\"><a href=\"javascript:window.opener.KW_doCalendar('"+obj+"',"+E+",'"+m+"','"+(y-1)+"');\" class=\"tblHdr\">&laquo</a>&nbsp;&nbsp;"+y+"&nbsp;&nbsp;<a href=\"javascript:window.opener.KW_doCalendar('"+obj+"',"+E+",'"+m+"','"+(Number(y)+1)+"');\"  class=\"tblHdr\">&raquo</a></td>\n</tr>\n"
+  wStr+="<tr>\n";for(wdn=0;wdn<7;wdn++)wStr+="<td class=\"subTbl\">"+wName[wdn]+"</td>\n";wStr+="</tr>\n"
+  for (x=0;x<parseInt(dStr.length/7);x++) {	wStr+="<tr>\n";	for (y=0;y<7;y++) {
+  yT=(E==1)?5:0;bC=(y==yT||y==6)?KW_color[2]:KW_color[3];
+  if ((y==yT||y==6) && KW_sw && !dStr[x*7+y].display) dStr[x*7+y].display=true;
+  if ((Number(m)+1)!=dStr[x*7+y].month) bC=KW_color[5]; if (dStr[x*7+y].special)
+  bC=KW_color[4];if (dStr[x*7+y].today) bC=KW_color[1];
+  a0=(KW_cl!=1)?"":"window.opener.MM_findObj('KW_selectedMonth',window.opener.document).value='"+dStr[x*7+y].month+"';window.opener.MM_findObj('KW_selectedYear',window.opener.document).value='"+dStr[x*7+y].year+"'; "
+  a1=(dStr[x*7+y].display)?"":"<a href=\"javascript:window.opener.MM_findObj('"+obj+"',window.opener.document).value='"+dStr[x*7+y].output+"';"+a0+" window.close();\" >";
+  a2=(dStr[x*7+y].display)?"":"</a>";
+  wStr+="<td align=\"center\" bgcolor="+bC+">"+a1+dStr[x*7+y].day+a2+"</td>\n";
+	}	wStr+="</tr>\n";}	wStr+="<tr><td colspan=7></td></tr></table></td></tr></table></bo"+""+"dy></ht"+""+"ml>";
+	var screenX=(self.screenX)?self.screenX+20:window.screenLeft
+	var screenY=(self.screenY)?self.screenY+70:window.screenTop
+	var w =(descx==-1)?parseInt(screen.width/2-75):descx+screenX;
+	var h=(descy==-1)?parseInt(screen.height/2-75):descy+screenY;
+	if (isNaN(w)) w=descx+20
+	if (isNaN(h)) h=descy+70		
+	var look='width='+KW_cWidth+',height=155,left='+w+',top='+h;	popwin=window.open('','calendar',look);
+	popwin.document.open();	popwin.document.write(wStr);	popwin.document.close();
+}
+
+function GP_AdvOpenWindow(theURL,winName,ft,pw,ph,wa,il,aoT,acT,bl,tr,trT,slT,pu) { //v3.09
+  // Copyright(c) George Petrov, www.dmxzone.com member of www.DynamicZones.com
+  var rph=ph,rpw=pw,nlp,ntp,lp=0,tp=0,acH,otH,slH,w=480,h=340,d=document,OP=(navigator.userAgent.indexOf("Opera")!=-1),IE=d.all&&!OP,IE5=IE&&window.print,NS4=d.layers,NS6=d.getElementById&&!IE&&!OP,NS7=NS6&&(navigator.userAgent.indexOf("Netscape/7")!=-1),b4p=IE||NS4||NS6||OP,bdyn=IE||NS4||NS6,olf="",sRes="";
+  imgs=theURL.split('|'),isSL=imgs.length>1;aoT=aoT&&aoT!=""?true:false;
+  var tSWF='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" ##size##><param name=movie value="##file##"><param name=quality value=high><embed src="##file##" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" ##size##></embed></object>'
+  var tQT='<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" ##size##><param name="src" value="##file##"><param name="autoplay" value="true"><param name="controller" value="true"><embed src="##file##" ##size## autoplay="true" controller="true" pluginspage="http://www.apple.com/quicktime/download/"></embed></object>'
+  var tIMG=(!IE?'<a href="javascript:'+(isSL?'nImg()':'window.close()')+'">':'')+'<img id=oImg name=oImg '+((NS4||NS6||NS7)?'onload="if(isImg){nW=pImg.width;nH=pImg.height}window.onload();" ':'')+'src="##file##" border="0" '+(IE?(isSL?'onClick="nImg()"':'onClick="window.close()"'):'')+(IE&&isSL?' style="cursor:pointer"':'')+(!NS4&&isSL?' onload="show(\\\'##file##\\\',true)"':'')+'>'+(!IE?'</a>':'')
+  var tMPG='<OBJECT classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" ##size## type="application/x-oleobject"><PARAM NAME="FileName" VALUE="##file##"><PARAM NAME="animationatStart" VALUE="true"><PARAM NAME="transparentatStart" VALUE="true"><PARAM NAME="autoStart" VALUE="true"><PARAM NAME="showControls" VALUE="true"><EMBED type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" SRC="##file##" ##size## AutoStart=true></EMBED></OBJECT>'
+  omw=aoT&&IE5;bl=bl&&bl!=""?true:false;tr=IE&&tr&&isSL?tr:0;trT=trT?trT:1;ph=ph>0?ph:100;pw=pw>0?pw:100;
+  re=/\.(swf)/i;isSwf=re.test(theURL);re=/\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(theURL);re=/\.(avi|mov|rm|rma|wav|asf|asx|mpg|mpeg|wmv)/i;isMov=re.test(theURL);isEmb=isImg||isMov||isSwf;
+  if(isImg&&NS4)ft=ft.replace(/resizable=no/i,'resizable=yes');if(b4p){w=screen.availWidth;h=screen.availHeight;}
+  if(wa&&wa!=""){if(wa.indexOf("center")!=-1){tp=(h-ph)/2;lp=(w-pw)/2;ntp='('+h+'-nWh)/2';nlp='('+w+'-nWw)/2'}if(wa.indexOf("bottom")!=-1){tp=h-ph;ntp=h+'-nWh'} if(wa.indexOf("right")!=-1){lp=w-pw;nlp=w+'-nWw'}
+    if(wa.indexOf("left")!=-1){lp=0;nlp=0} if(wa.indexOf("top")!=-1){tp=0;ntp=0}if(wa.indexOf("fitscreen")!=-1){lp=0;tp=0;ntp=0;nlp=0;pw=w;ph=h}
+    ft+=(ft.length>0?',':'')+'width='+pw;ft+=(ft.length>0?',':'')+'height='+ph;ft+=(ft.length>0?',':'')+'top='+tp+',left='+lp;
+  } if(IE&&bl&&ft.indexOf("fullscreen")!=-1&&!aoT)ft+=",fullscreen=1";
+  if(omw){ft='center:no;'+ft.replace(/lbars=/i,'l=').replace(/(top|width|left|height)=(\d+)/gi,'dialog$1=$2px').replace(/=/gi,':').replace(/,/gi,';')}
+  if (window["pWin"]==null) window["pWin"]= new Array();var wp=pWin.length;pWin[wp]=(omw)?window.showModelessDialog(imgs[0],window,ft):window.open('',winName,ft);
+  if(pWin[wp].opener==null)pWin[wp].opener=self;window.focus();
+  if(b4p){ if(bl||wa.indexOf("fitscreen")!=-1){pWin[wp].resizeTo(pw,ph);pWin[wp].moveTo(lp,tp);}
+    if(aoT&&!IE5){otH=pWin[wp].setInterval("window.focus();",50);olf='window.setInterval("window.focus();",50);'}
+  } sRes='\nvar nWw,nWh,d=document,w=window;'+(bdyn?';dw=parseInt(nW);dh=parseInt(nH);':'if(d.images.length == 1){var di=d.images[0];dw=di.width;dh=di.height;\n')+
+    'if(dw>0&&dh>0){nWw=dw+'+(IE?12:NS7?15:NS6?14:0)+';nWh=dh+'+(IE?32:NS7?50:NS6?1:0)+';'+(OP?'w.resizeTo(nWw,nWh);w.moveTo('+nlp+','+ntp+')':(NS4||NS6?'w.innerWidth=nWw;w.innerHeight=nWh;'+(NS6?'w.outerWidth-=14;':''):(!omw?'w.resizeTo(nWw,nWh)':'w.dialogWidth=nWw+"px";w.dialogHeight=nWh+"px"')+';eh=dh-d.body.clientHeight;ew=dw-d.body.clientWidth;if(eh!=0||ew!=0)\n'+
+  	(!omw?'w.resizeTo(nWw+ew,nWh+eh);':'{\nw.dialogWidth=(nWw+ew)+"px";\nw.dialogHeight=(nWh+eh)+"px"}'))+(!omw?'w.moveTo('+nlp+','+ntp+')'+(!(bdyn)?'}':''):'\nw.dialogLeft='+nlp+'+"px";w.dialogTop='+ntp+'+"px"\n'))+'}';
+  var iwh="",dwh="",sscr="",sChgImg="";tRep=".replace(/##file##/gi,cf).replace(/##size##/gi,(nW>0&&nH>0?'width=\\''+nW+'\\' height=\\''+nH+'\\'':''))";
+  var chkType='re=/\\.(swf)/i;isSwf=re.test(cf);re=/\\.(mov)/i;isQT=re.test(cf);re=/\\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(cf);re=/\.(avi|rm|rma|wav|asf|asx|mpg|mpeg|wmv)/i;isMov=re.test(cf);';
+  var sSize='tSWF=\''+tSWF+'\';\ntQT=\''+tQT+'\';tIMG=\''+tIMG+'\';tMPG=\''+tMPG+'\'\n'+"if (cf.substr(cf.length-1,1)==']'){var bd=cf.lastIndexOf('[');if(bd>0){var di=cf.substring(bd+1,cf.length-1);var da=di.split('x');nW=da[0];nH=da[1];cf=cf.substring(0,bd)}}"+chkType;
+  if(isEmb){if(isSL) { 
+      sChgImg=(NS4?'var l = document.layers[\'slide\'];ld=l.document;ld.open();ld.write(nHtml);ld.close();':IE?'document.all[\'slide\'].innerHTML = nHtml;':NS6?'var l=document.getElementById(\'slide\');while (l.hasChildNodes()) l.removeChild(l.lastChild);var range=document.createRange();range.setStartAfter(l);var docFrag=range.createContextualFragment(nHtml);l.appendChild(docFrag);':'');
+      sscr='var pImg=new Image(),slH,ci=0,simg="'+theURL+'".split("|");'+
+      'function show(cf,same){if(same){di=document.images[0];nW=di.width;nH=di.height}'+sRes+'}\n'+
+      'function nImg(){if(slH)window.clearInterval(slH);nW=0;nH=0;cf=simg[ci];'+sSize+'document.title=cf;'+
+      (tr!=0?';var fi=IElem.filters[0];fi.Apply();IElem.style.visibility="visible";fi.transition='+(tr-1)+';fi.Play();':'')+
+      'if (nW==0&&nH==0){if(isImg){nW=pImg.width;nH=pImg.height}else{nW='+pw+';nH='+ph+'}}'+
+      (bdyn?'nHtml=(isSwf?tSWF'+tRep+':isQT?tQT'+tRep+':isImg?tIMG'+tRep+':isMov?tMPG'+tRep+':\'\');'+sChgImg+';':'if(document.images)document["oImg"].src=simg[ci];')+
+      sRes+';ci=ci==simg.length-1?0:ci+1;cf=simg[ci];re=/\\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(cf);if(isImg)pImg.src=cf;'+
+      (isSL?(!NS4?'if(ci>1)':'')+'slH=window.setTimeout("nImg()",'+slT*1000+')}':'');
+    } else {sscr='var re,pImg=new Image(),nW=0,nH=0,nHtml="",cf="'+theURL+'";'+chkType+'if(isImg)pImg.src=cf;\n'+
+      'function show(){'+sSize+';if (nW==0&&nH==0){if(isImg){;nW=pImg.width;nH=pImg.height;if (nW==0&&nH==0){nW='+pw+';nH='+ph+'}}else{nW='+pw+';nH='+ph+
+      '}};nHtml=(isSwf?tSWF'+tRep+':isQT?tQT'+tRep+':isImg?tIMG'+tRep+':isMov?tMPG'+tRep+':\'\');document.write(nHtml)};'}
+    pd = pWin[wp].document;pd.open();pd.write('<html><'+'head><title>'+imgs[0]+'</title><'+'script'+'>'+sscr+'</'+'script>'+(!NS4?'<STYLE TYPE="text/css">BODY {margin:0;border:none;padding:0;}</STYLE>':'')+'</head><body '+(NS4&&isSL?'onresize=\'ci--;nImg()\' ':'')+'onload=\''+olf+(isSL?';nImg()':sRes)+'\' bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">'); 
+    if(rpw>0){iwh='width="'+rpw+'" ';dwh='width:'+rpw} if(rph>0){iwh+='height="'+rph+'"';dwh+='height:'+rph}
+    if(tr!=0) pd.write('<span id=IElem Style="Visibility:hidden;Filter:revealTrans(duration='+trT+');width:100%;height=100%">');
+    if(isSL&&bdyn) {pd.write(NS4?'<layer id=slide></layer>':'<span id=slide></span>')} else {pd.write('<'+'script>show()'+'</'+'script>')}   
+    if(tr!=0) pd.write('</span>');pd.write('</body></html>');pd.close();
+  }else {if(!omw)pWin[wp].location.href=imgs[0];}
+  if((acT&&acT>0)||(slT&&slT>0&&isSL)){if(pWin[wp].document.body)pWin[wp].document.body.onunload=function(){if(acH)window.clearInterval(acH);if(slH)window.clearInterval(slH)}}
+  if(acT&&acT>0)acH=window.setTimeout("pWin["+wp+"].close()",acT*1000);if(slT&&slT>0&&isSL)slH=window.setTimeout("if(pWin["+wp+"].nImg)pWin["+wp+"].nImg()",slT*1000);  
+  if(pu&&pu!=""){pWin[wp].blur();window.focus()} else pWin[wp].focus();document.MM_returnValue=(il&&il!="")?false:true;
+}
+
+function GP_popupConfirmMsg(msg) { //v1.0
+  document.MM_returnValue = confirm(msg);
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+
+function checkColor1(obj) {
+   obj.style.backgroundColor = '#FFFF00';
+}
+
+function checkColor2(obj) {
+   obj.style.backgroundColor = '#FFFFFF';
+}
+//-->
+</script>
+<script type="text/javascript" language="javascript"> 
+function getParent(el) { 
+if (document.all) 
+while (el.parentElement!= null) 
+if (el.tagName == 'TR') return el; 
+else el = el.parentElement; 
+else if (document.getElementById) { 
+if (el.nodeType == 1 && el.tagName.toLowerCase() == 'tr') return el; 
+else return getParent(el.parentNode); 
+} 
+} 
+
+function setParentTR(e, CSSattr, CSSvalue) { 
+var el = (e && e.srcElement)? e.srcElement : (e && e.target)? e.target : null; 
+if (el) { 
+var which = el.checked; 
+var parentTR = getParent(el); 
+parentTR.style[CSSattr] = (which)? CSSvalue : ''; 
+} 
+} 
+</script> 
+<script type="text/javascript" language="javascript"> 
+var global=1; 
+function checkAll(formId, cName, check ) 
+{ 
+if(check==1) 
+{ 
+for (i=0,n=formId.elements.length;i<n;i++) 
+if (formId.elements[i].className.indexOf(cName)!=-1) 
+formId.elements[i].checked = true; 
+} 
+if(check==0) 
+{ 
+for (i=0,n=formId.elements.length;i<n;i++) 
+if (formId.elements[i].className.indexOf(cName)!=-1) 
+formId.elements[i].checked = false; 
+} 
+
+} 
+function toggle() 
+{ 
+checkAll(document.getElementById('myform'), 'filecheck', global); 
+if (global==0) 
+{ 
+global=1; 
+} 
+else if(global==1) 
+{ 
+global=0; 
+} 
+} 
+</script> 
+<script language="JavaScript" type="text/JavaScript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script> 
+<script language="JavaScript" type="text/JavaScript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+function ReverseContentDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; 
+}
+}
+</script>
+<script language="JavaScript1.2">
+<!--
+isIE=document.all;
+isNN=!document.all&&document.getElementById;
+isN4=document.layers;
+isActive=false;
+
+function MoveInit(e){
+  topOne=isIE ? "BODY" : "HTML";
+  whichOne=isIE ? document.all.FloatingLayer : document.getElementById("FloatingLayer");  
+  ActiveOne=isIE ? event.srcElement : e.target;  
+  while (ActiveOne.id!="titleBar"&&ActiveOne.tagName!=topOne){
+    ActiveOne=isIE ? ActiveOne.parentElement : ActiveOne.parentNode;
+  }  
+  if (ActiveOne.id=="titleBar"){
+    offsetx=isIE ? event.clientX : e.clientX;
+    offsety=isIE ? event.clientY : e.clientY;
+    nowX=parseInt(whichOne.style.left);
+    nowY=parseInt(whichOne.style.top);
+    MoveEnabled=true;
+    document.onmousemove=Move;
+  }
+}
+
+function Move(e){
+  if (!MoveEnabled) return;
+  whichOne.style.left=isIE ? nowX+event.clientX-offsetx : nowX+e.clientX-offsetx; 
+  whichOne.style.top=isIE ? nowY+event.clientY-offsety : nowY+e.clientY-offsety;
+  return false;  
+}
+
+function MoveN4(whatOne){
+  if (!isN4) return;
+  N4=eval(whatOne);
+  N4.captureEvents(Event.MOUSEDOWN|Event.MOUSEUP);
+  N4.onmousedown=function(e){
+    N4.captureEvents(Event.MOUSEMOVE);
+    N4x=e.x;
+    N4y=e.y;
+  }
+  N4.onmousemove=function(e){
+    if (isActive){
+      N4.moveBy(e.x-N4x,e.y-N4y);
+      return false;
+    }
+  }
+  N4.onmouseup=function(){
+    N4.releaseEvents(Event.MOUSEMOVE);
+  }
+}
+
+function ToggleFloatingLayer(DivID, iState) // 1 visible, 0 hidden
+{
+    if(document.layers)	   //NN4+
+    {
+       document.layers[DivID].visibility = iState ? "show" : "hide";
+    }
+    else if(document.getElementById)	  //gecko(NN6) + IE 5+
+    {
+        var obj = document.getElementById(DivID);
+        obj.style.visibility = iState ? "visible" : "hidden";
+    }
+    else if(document.all)	// IE 4
+    {
+        document.all[DivID].style.visibility = iState ? "visible" : "hidden";
+    }
+}
+
+document.onmousedown=MoveInit;
+document.onmouseup=Function("MoveEnabled=false");
+// -->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkColor1(obj) {
+   obj.style.backgroundColor = '#FFFF66';
+}
+//-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkColor2(obj) {
+   obj.style.backgroundColor = '#FFFFFF';
+}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Modified By:  Steve Robison, Jr. (stevejr@ce.net) -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var checkflag = "false";
+function check(field) {
+if (checkflag == "false") {
+for (i = 0; i < field.length; i++) {
+field[i].checked = true;}
+checkflag = "true";
+return "Uncheck All"; }
+else {
+for (i = 0; i < field.length; i++) {
+field[i].checked = false; }
+checkflag = "false";
+return "Check All"; }
+}
+//  End -->
+</script>
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+<script type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function GP_AdvOpenWindow(theURL,winName,ft,pw,ph,wa,il,aoT,acT,bl,tr,trT,slT,pu) { //v3.09
+  // Copyright(c) George Petrov, www.dmxzone.com member of www.DynamicZones.com
+  var rph=ph,rpw=pw,nlp,ntp,lp=0,tp=0,acH,otH,slH,w=480,h=340,d=document,OP=(navigator.userAgent.indexOf("Opera")!=-1),IE=d.all&&!OP,IE5=IE&&window.print,NS4=d.layers,NS6=d.getElementById&&!IE&&!OP,NS7=NS6&&(navigator.userAgent.indexOf("Netscape/7")!=-1),b4p=IE||NS4||NS6||OP,bdyn=IE||NS4||NS6,olf="",sRes="";
+  imgs=theURL.split('|'),isSL=imgs.length>1;aoT=aoT&&aoT!=""?true:false;
+  var tSWF='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" ##size##><param name=movie value="##file##"><param name=quality value=high><embed src="##file##" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" ##size##></embed></object>'
+  var tQT='<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" ##size##><param name="src" value="##file##"><param name="autoplay" value="true"><param name="controller" value="true"><embed src="##file##" ##size## autoplay="true" controller="true" pluginspage="http://www.apple.com/quicktime/download/"></embed></object>'
+  var tIMG=(!IE?'<a href="javascript:'+(isSL?'nImg()':'window.close()')+'">':'')+'<img id=oImg name=oImg '+((NS4||NS6||NS7)?'onload="if(isImg){nW=pImg.width;nH=pImg.height}window.onload();" ':'')+'src="##file##" border="0" '+(IE?(isSL?'onClick="nImg()"':'onClick="window.close()"'):'')+(IE&&isSL?' style="cursor:pointer"':'')+(!NS4&&isSL?' onload="show(\\\'##file##\\\',true)"':'')+'>'+(!IE?'</a>':'')
+  var tMPG='<OBJECT classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" ##size## type="application/x-oleobject"><PARAM NAME="FileName" VALUE="##file##"><PARAM NAME="animationatStart" VALUE="true"><PARAM NAME="transparentatStart" VALUE="true"><PARAM NAME="autoStart" VALUE="true"><PARAM NAME="showControls" VALUE="true"><EMBED type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" SRC="##file##" ##size## AutoStart=true></EMBED></OBJECT>'
+  omw=aoT&&IE5;bl=bl&&bl!=""?true:false;tr=IE&&tr&&isSL?tr:0;trT=trT?trT:1;ph=ph>0?ph:100;pw=pw>0?pw:100;
+  re=/\.(swf)/i;isSwf=re.test(theURL);re=/\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(theURL);re=/\.(avi|mov|rm|rma|wav|asf|asx|mpg|mpeg|wmv)/i;isMov=re.test(theURL);isEmb=isImg||isMov||isSwf;
+  if(isImg&&NS4)ft=ft.replace(/resizable=no/i,'resizable=yes');if(b4p){w=screen.availWidth;h=screen.availHeight;}
+  if(wa&&wa!=""){if(wa.indexOf("center")!=-1){tp=(h-ph)/2;lp=(w-pw)/2;ntp='('+h+'-nWh)/2';nlp='('+w+'-nWw)/2'}if(wa.indexOf("bottom")!=-1){tp=h-ph;ntp=h+'-nWh'} if(wa.indexOf("right")!=-1){lp=w-pw;nlp=w+'-nWw'}
+    if(wa.indexOf("left")!=-1){lp=0;nlp=0} if(wa.indexOf("top")!=-1){tp=0;ntp=0}if(wa.indexOf("fitscreen")!=-1){lp=0;tp=0;ntp=0;nlp=0;pw=w;ph=h}
+    ft+=(ft.length>0?',':'')+'width='+pw;ft+=(ft.length>0?',':'')+'height='+ph;ft+=(ft.length>0?',':'')+'top='+tp+',left='+lp;
+  } if(IE&&bl&&ft.indexOf("fullscreen")!=-1&&!aoT)ft+=",fullscreen=1";
+  if(omw){ft='center:no;'+ft.replace(/lbars=/i,'l=').replace(/(top|width|left|height)=(\d+)/gi,'dialog$1=$2px').replace(/=/gi,':').replace(/,/gi,';')}
+  if (window["pWin"]==null) window["pWin"]= new Array();var wp=pWin.length;pWin[wp]=(omw)?window.showModelessDialog(imgs[0],window,ft):window.open('',winName,ft);
+  if(pWin[wp].opener==null)pWin[wp].opener=self;window.focus();
+  if(b4p){ if(bl||wa.indexOf("fitscreen")!=-1){pWin[wp].resizeTo(pw,ph);pWin[wp].moveTo(lp,tp);}
+    if(aoT&&!IE5){otH=pWin[wp].setInterval("window.focus();",50);olf='window.setInterval("window.focus();",50);'}
+  } sRes='\nvar nWw,nWh,d=document,w=window;'+(bdyn?';dw=parseInt(nW);dh=parseInt(nH);':'if(d.images.length == 1){var di=d.images[0];dw=di.width;dh=di.height;\n')+
+    'if(dw>0&&dh>0){nWw=dw+'+(IE?12:NS7?15:NS6?14:0)+';nWh=dh+'+(IE?32:NS7?50:NS6?1:0)+';'+(OP?'w.resizeTo(nWw,nWh);w.moveTo('+nlp+','+ntp+')':(NS4||NS6?'w.innerWidth=nWw;w.innerHeight=nWh;'+(NS6?'w.outerWidth-=14;':''):(!omw?'w.resizeTo(nWw,nWh)':'w.dialogWidth=nWw+"px";w.dialogHeight=nWh+"px"')+';eh=dh-d.body.clientHeight;ew=dw-d.body.clientWidth;if(eh!=0||ew!=0)\n'+
+  	(!omw?'w.resizeTo(nWw+ew,nWh+eh);':'{\nw.dialogWidth=(nWw+ew)+"px";\nw.dialogHeight=(nWh+eh)+"px"}'))+(!omw?'w.moveTo('+nlp+','+ntp+')'+(!(bdyn)?'}':''):'\nw.dialogLeft='+nlp+'+"px";w.dialogTop='+ntp+'+"px"\n'))+'}';
+  var iwh="",dwh="",sscr="",sChgImg="";tRep=".replace(/##file##/gi,cf).replace(/##size##/gi,(nW>0&&nH>0?'width=\\''+nW+'\\' height=\\''+nH+'\\'':''))";
+  var chkType='re=/\\.(swf)/i;isSwf=re.test(cf);re=/\\.(mov)/i;isQT=re.test(cf);re=/\\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(cf);re=/\.(avi|rm|rma|wav|asf|asx|mpg|mpeg|wmv)/i;isMov=re.test(cf);';
+  var sSize='tSWF=\''+tSWF+'\';\ntQT=\''+tQT+'\';tIMG=\''+tIMG+'\';tMPG=\''+tMPG+'\'\n'+"if (cf.substr(cf.length-1,1)==']'){var bd=cf.lastIndexOf('[');if(bd>0){var di=cf.substring(bd+1,cf.length-1);var da=di.split('x');nW=da[0];nH=da[1];cf=cf.substring(0,bd)}}"+chkType;
+  if(isEmb){if(isSL) { 
+      sChgImg=(NS4?'var l = document.layers[\'slide\'];ld=l.document;ld.open();ld.write(nHtml);ld.close();':IE?'document.all[\'slide\'].innerHTML = nHtml;':NS6?'var l=document.getElementById(\'slide\');while (l.hasChildNodes()) l.removeChild(l.lastChild);var range=document.createRange();range.setStartAfter(l);var docFrag=range.createContextualFragment(nHtml);l.appendChild(docFrag);':'');
+      sscr='var pImg=new Image(),slH,ci=0,simg="'+theURL+'".split("|");'+
+      'function show(cf,same){if(same){di=document.images[0];nW=di.width;nH=di.height}'+sRes+'}\n'+
+      'function nImg(){if(slH)window.clearInterval(slH);nW=0;nH=0;cf=simg[ci];'+sSize+'document.title=cf;'+
+      (tr!=0?';var fi=IElem.filters[0];fi.Apply();IElem.style.visibility="visible";fi.transition='+(tr-1)+';fi.Play();':'')+
+      'if (nW==0&&nH==0){if(isImg){nW=pImg.width;nH=pImg.height}else{nW='+pw+';nH='+ph+'}}'+
+      (bdyn?'nHtml=(isSwf?tSWF'+tRep+':isQT?tQT'+tRep+':isImg?tIMG'+tRep+':isMov?tMPG'+tRep+':\'\');'+sChgImg+';':'if(document.images)document["oImg"].src=simg[ci];')+
+      sRes+';ci=ci==simg.length-1?0:ci+1;cf=simg[ci];re=/\\.(gif|jpg|png|bmp|jpeg)/i;isImg=re.test(cf);if(isImg)pImg.src=cf;'+
+      (isSL?(!NS4?'if(ci>1)':'')+'slH=window.setTimeout("nImg()",'+slT*1000+')}':'');
+    } else {sscr='var re,pImg=new Image(),nW=0,nH=0,nHtml="",cf="'+theURL+'";'+chkType+'if(isImg)pImg.src=cf;\n'+
+      'function show(){'+sSize+';if (nW==0&&nH==0){if(isImg){;nW=pImg.width;nH=pImg.height;if (nW==0&&nH==0){nW='+pw+';nH='+ph+'}}else{nW='+pw+';nH='+ph+
+      '}};nHtml=(isSwf?tSWF'+tRep+':isQT?tQT'+tRep+':isImg?tIMG'+tRep+':isMov?tMPG'+tRep+':\'\');document.write(nHtml)};'}
+    pd = pWin[wp].document;pd.open();pd.write('<html><'+'head><title>'+imgs[0]+'</title><'+'script'+'>'+sscr+'</'+'script>'+(!NS4?'<STYLE TYPE="text/css">BODY {margin:0;border:none;padding:0;}</STYLE>':'')+'</head><body '+(NS4&&isSL?'onresize=\'ci--;nImg()\' ':'')+'onload=\''+olf+(isSL?';nImg()':sRes)+'\' bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">'); 
+    if(rpw>0){iwh='width="'+rpw+'" ';dwh='width:'+rpw} if(rph>0){iwh+='height="'+rph+'"';dwh+='height:'+rph}
+    if(tr!=0) pd.write('<span id=IElem Style="Visibility:hidden;Filter:revealTrans(duration='+trT+');width:100%;height=100%">');
+    if(isSL&&bdyn) {pd.write(NS4?'<layer id=slide></layer>':'<span id=slide></span>')} else {pd.write('<'+'script>show()'+'</'+'script>')}   
+    if(tr!=0) pd.write('</span>');pd.write('</body></html>');pd.close();
+  }else {if(!omw)pWin[wp].location.href=imgs[0];}
+  if((acT&&acT>0)||(slT&&slT>0&&isSL)){if(pWin[wp].document.body)pWin[wp].document.body.onunload=function(){if(acH)window.clearInterval(acH);if(slH)window.clearInterval(slH)}}
+  if(acT&&acT>0)acH=window.setTimeout("pWin["+wp+"].close()",acT*1000);if(slT&&slT>0&&isSL)slH=window.setTimeout("if(pWin["+wp+"].nImg)pWin["+wp+"].nImg()",slT*1000);  
+  if(pu&&pu!=""){pWin[wp].blur();window.focus()} else pWin[wp].focus();document.MM_returnValue=(il&&il!="")?false:true;
+}
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<script type="text/javascript" language="JavaScript"><!--
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseContentDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//-->
+</script>
+
+</head>
+
+<body onLoad="document.getElementById('wizard').style.display='block'; document.getElementById('fade').style.display='block'">
+
+<div id="fade" class="black_overlay"></div>
+<div class="header">
+<style type="text/css">
+<!--
+body {
+	background-color: #f3f3f3; 
+}
+ul#navlist
+{
+font: bold 11px verdana, arial, sans-serif;
+list-style-type: none;
+padding-bottom: 30px;
+border-bottom: 0px solid #003399;
+margin: 0;
+}
+
+ul#navlist li
+{
+float: left;
+height: 30px;
+background-color: #BAC6EF;
+margin: 1px 1px 0 1px;
+border-top: 1px solid #003399;
+border-right: 1px solid #003399;
+border-left: 1px solid #003399;
+-moz-border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-khtml-border-top-left-radius: 5px;
+-khtml-border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+-moz-box-shadow: 2px 2px 3px #ccc;
+-webkit-box-shadow: 2px 2px 3px #ccc;
+box-shadow: 2px 2px 3px #ccc;
+}
+
+li#active a
+{
+border-bottom: 0px solid #f3f3f3;
+background-color: #f3f3f3;
+}
+
+li#active a { color: #000; }
+
+#navlist a
+{
+float: left;
+display: block;
+color: #000;
+text-decoration: none;
+padding: 10px;
+-moz-border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-khtml-border-top-left-radius: 5px;
+-khtml-border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+#navlist a:hover { background: #fff; }
+
+-->
+</style>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="20"><div align="right">User:&nbsp;<strong>SwiftPac Support</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Branch:&nbsp;<strong><a href="#" onClick="GP_AdvOpenWindow('../select_branch.asp','SelectBranch','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',350,500,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">SVD</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="?lan_h=EN&url=/appl2.0/warehouse/add_warehouse.asp?id=141101"><img src="../../icons-16/flag_usa.png" width="16" height="16" border="0" align="absmiddle" title="Language"/></a>&nbsp;<a href="?lan_h=ES&url=/appl2.0/warehouse/add_warehouse.asp?id=141101"><img src="../../icons-16/flag_spain.png" width="16" height="16" border="0" align="absmiddle" title="Language" /></a>&nbsp;<a href="?lan_h=PT&url=/appl2.0/warehouse/add_warehouse.asp?id=141101"><img src="../../icons-16/flag_brazil.png" width="16" height="16" border="0" align="absmiddle" title="Language" /></a>
+      </div></td>
+    </tr>
+</table>
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="200" height="50"><img src="../../images/logo_swiftpac.jpg"></td>
+      <td valign="bottom">
+
+	  <div id="navcontainer">
+		<ul id="navlist">
+		<li id="active"><a href="/appl2.0/index/routing.asp?section=Index&redir=/appl2.0/index/" >Home</a></li>
+		
+        <li ><a href="/appl2.0/index/routing.asp?section=Pakya&redir=/appl2.0/agent_integration/" >MIA</a></li>
+		
+        <li ><a href="/appl2.0/index/routing.asp?section=Warehouse&redir=/appl2.0/warehouse/" id="current">Warehouse</a></li>
+        
+		<li ><a href="/appl2.0/index/routing.asp?section=Shipments&redir=/appl2.0/shipments/" >Shipments</a></li>
+        
+        <li ><a href="/appl2.0/index/routing.asp?section=Invoices&redir=/appl2.0/invoices/" >Invoices</a></li>
+        
+        <li ><a href="/appl2.0/index/routing.asp?section=Bills&redir=/appl2.0/bills/" >Bills</a></li>
+        
+		<li ><a href="/appl2.0/index/routing.asp?section=Accounts&redir=/appl2.0/accounts/" >Accounts</a></li>
+        
+        <li ><a href="/appl2.0/index/routing.asp?section=Settings&redir=/appl2.0/settings/" >Settings</a></li>
+        
+	    </ul>
+	  </div>
+        
+        
+	    </div></td>
+    </tr>
+</table>	  
+	  
+	  
+
+
+</div>
+<div class="menu">
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkColor1(obj) {
+   obj.style.backgroundColor = '#FFFF66';
+}
+//-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkColor2(obj) {
+   obj.style.backgroundColor = '#FFFFFF';
+}
+//-->
+</script>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td width="50%">
+    <img src="../../icons/close@2x.png" width="20" height="20" align="absmiddle" />&nbsp;<a href="/signout.asp"><strong>Sign Out</strong></a>
+    </td>
+    <td width="50%">
+    <div align="right">
+	   
+       <form name="search" method="post" action="../index/search.asp">
+       <input name="action" type="hidden" id="action" value="newsearch" class="ntext">
+       <input name="keyw" type="text" class="ntext" id="keyw" placeholder="Search" onfocus="checkColor1(this)" onblur="checkColor2(this)" size="30">
+       <input name="Submit" type="image" src="../../icons/button-play-7@2x.png" width="20" height="20" align="absmiddle" >
+      </form>
+	  
+      </div>	</td>
+  </tr>
+</table>
+
+</div>
+<div class="main">
+
+
+
+
+<div id="wizard" class="menu_content">
+<form name="form_wizard" method="post" action="">
+  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td><strong>ADD CARTONS ON WAREHOUSE RECEIPT NUMBER&nbsp;141101</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            <td><input name="length" type="text" autofocus class="ntext" id="length" placeholder="Length" size="10">
+              &nbsp;
+              in
+            </tr>
+          <tr>
+            <td><input name="width" type="text" class="ntext" id="width" placeholder="Width" size="10">
+              &nbsp;
+              in
+            </tr>
+          <tr>
+            <td><input name="height" type="text" class="ntext" id="height" placeholder="Height" size="10">
+              &nbsp;
+              in
+            </tr>
+          <tr>
+            <td><input name="weight" type="text" class="ntext" id="weight" placeholder="Weight" size="10" >
+              &nbsp;lbs        
+          </tr>
+          <tr>
+            <td><input name="tracking_number" type="text" class="ntext" id="tracking_number" placeholder="Tracking Number" value="" size="50">
+            </tr>
+        </table></td>
+        <td width="20%" valign="top"><div align="center">
+          <table width="90%" border="0" align="center" cellpadding="5" cellspacing="0">
+            <tbody>
+              <tr>
+                <td><div align="center"><span class="monitor">&nbsp;&nbsp;</span></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div></td>
+      </tr>
+      <tr>
+        <td><input type="submit" name="submit" id="submit" value="Submit" class="bt-black-small">
+          <input name="action" type="hidden" id="action" value="process_carton">
+          <input name="id" type="hidden" id="id" value="141101">
+          <input name="branch" type="hidden" id="branch" value="SVD">
+        <input name="weight_type" type="hidden" id="weight_type" value="lbs"></td>
+        <td><div align="right">
+          
+          <input type="button" name="button" id="button" value="Close" class="bt-green-small" onClick="location.href='add_warehouse.asp?id=141101&action=carton_complete'">
+          
+        </div></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+</div>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="180" valign="top">
+	  <table class="insert">
+<tr>
+<td>
+
+<br />
+
+
+<ul id="MenuBar1" class="MenuBarVertical">
+
+	<li><a href="#" onClick="GP_AdvOpenWindow('/appl2.0/cargotrack.asp','Cargotrack','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',700,450,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">My Account</a>	
+		 
+    <li><a href="/appl2.0/index/" target="_blank">New window</a>
+	
+	<li><a href="#">Warehouse</a>
+		<ul>
+			
+            <li><a href="/appl2.0/warehouse/tracking_numbers.asp">Receive Tracking</a>		 
+	    	
+            <li><a href="/appl2.0/warehouse/add_warehouse.asp?action=create&branch=SVD"  onClick="GP_popupConfirmMsg('Are you sure?');return document.MM_returnValue">Create Warehouse</a>		 
+            
+            <li><a href="/appl2.0/warehouse/onhand.asp">On hand</a>		 
+            <li><a href="/appl2.0/warehouse/ship_out.asp?action=add" onClick="GP_popupConfirmMsg('Are you sure?');return document.MM_returnValue">Freight Release</a>		 
+            
+            <li><a href="/appl2.0/warehouse/delivery.asp">Delivery Route</a>	
+            <li><a href="/appl2.0/warehouse/storage.asp">Storage</a>	
+            <li><a href="/appl2.0/warehouse/screening_list.asp">Screening</a>	
+            <li><a href="/appl2.0/warehouse/export.asp">Export Data</a>	
+			
+            <li><a href="/appl2.0/warehouse/inventory.asp">Inventory</a>
+            
+            <li><a href="/appl2.0/loading/default.asp">Loading Guide</a>		 
+			
+			<li><a href="/appl2.0/warehouse/">Search Warehouse</a>		 
+			<li><a href="#">Reports</a>
+				<ul>
+					
+                    <li><a href="/appl2.0/reports/sel_whsinventory.asp" target="_blank">Scan Inventory</a>		 
+					<li><a href="/appl2.0/print/whs_onhand.asp">On hand</a>		 
+					<li><a href="/appl2.0/print/onhand_location.asp">On hand&nbsp;By Location</a>		 
+					<li><a href="/appl2.0/print/onhand_location.asp?format=simple">On hand&nbsp;By Location&nbsp;[Simple]</a>		 
+					<li><a href="/appl2.0/print/whs_freightin.asp">Received Today</a>		 
+					<li><a href="/appl2.0/print/whs_notassigned.asp">Not assigned</a>		 
+					<li><a href="/appl2.0/print/whs_air.asp">Air</a>		 
+					<li><a href="/appl2.0/print/whs_air_d.asp">Air&nbsp;-&nbsp;Direct</a>		 
+					<li><a href="/appl2.0/print/whs_air_c.asp">Air&nbsp;-&nbsp;Consol</a>		 
+					<li><a href="/appl2.0/print/whs_ocean.asp">Ocean</a>		 
+					<li><a href="/appl2.0/print/whs_ocean_d.asp">Ocean&nbsp;-&nbsp;Direct</a>		 
+					<li><a href="/appl2.0/print/whs_ocean_c.asp">Ocean&nbsp;-&nbsp;Consol</a>		 
+					<li><a href="/appl2.0/print/whs_onhold.asp">Hold</a>
+					<li><a href="/appl2.0/print/warehouse_by_location.asp">On hand&nbsp;By Location</a>		 
+					<li><a href="/appl2.0/warehouse/report.asp">Configure Your Report</a>		 
+					<li><a href="#" onClick="GP_AdvOpenWindow('/appl2.0/warehouse/labels_racks.asp','Labels','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,channelmode=no,directories=no',400,500,'center','ignoreLink','alwaysOnTop',0,'borderless',1,5,5,'');return document.MM_returnValue">Generate Labels for Racks</a>		 
+						 
+				</ul>		 
+			<li><a href="/appl2.0/warehouse/pending_billing.asp">Pending billing</a>	
+			<li><a href="/appl2.0/warehouse/pending_payment.asp">Pending Payment</a>	
+			<li><a href="/appl2.0/warehouse/pending_delivery.asp">Pending Delivery</a>		 
+			<li><a href="/appl2.0/warehouse/billing.asp">Billing</a>		 
+            <li><a href="/appl2.0/warehouse/rates_date.asp">Billing&nbsp;Rates</a>		 
+			<li><a href="/appl2.0/dist/default.asp">Distribution</a>		 
+			<li><a href="#"  onClick="GP_AdvOpenWindow('/appl2.0/warehouse/pending_labels.asp','Labels','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',700,600,'center','ignoreLink','alwaysOnTop',0,'borderless',1,5,5,'');return document.MM_returnValue">Labels Pending Printing</a>		 
+    		<li><a href="#">Scan</a>
+                <ul>
+                    <li><a href="/appl2.0/warehouse/scanning.asp" target="_blank">Courier Control</a>		 
+                    <li><a href="/appl2.0/warehouse/scanning_file.asp" target="_blank">File</a>		 
+                    <li><a href="/appl2.0/warehouse/scanning_dest.asp" target="_blank">Confirmed Arrival</a>		
+                </ul>
+  	  	</ul>
+	</li>
+	
+    <li><a href="#">Quotations</a>
+		<ul>		  
+		  	<li><a href="/appl2.0/quotes/update.asp?action=add">Create</a>		 
+	  		<li><a href="/appl2.0/quotes/default.asp">Search</a>		 
+	  		<li><a href="/appl2.0/quotes/inst_search.asp">Shipping Instructions</a>		 
+		  			 
+	</ul>
+    </li>
+	
+	<li><a href="#">Shipments</a>
+		<ul>		  
+		  	<li><a href="/appl2.0/booking/control.asp?user=%">Booking</a>		 
+		 	
+		 	<li><a href="/appl2.0/master/stock.asp?action=create">AWB Stock</a>		 
+		 	<li><a href="/appl2.0/house/stock.asp">House Numbers Stock</a>		 
+		 	
+            <li><a href="/appl2.0/loading/default.asp">Loading Guide</a>		 
+            <li><a href="/appl2.0/master/manifest.asp">Master's Manifest&nbsp;[Flights]</a>		 
+			<li><a href="#">Create</a>
+				<ul>	
+		 			<li><a href="/appl2.0/master/add.asp">Master</a>		 
+					<li><a href="/appl2.0/house/add.asp">House</a>		 
+					
+                    <li><a href="/appl2.0/import/wizard_a.asp">Import</a>
+                    		 
+					<li><a href="/appl2.0/sed/add.asp">SED</a>
+				</ul>	  
+		 	
+			<li><a href="#">Search</a>
+				<ul>
+		 			<li><a href="/appl2.0/master/search.asp">Master</a>		 
+		  			<li><a href="/appl2.0/house/default.asp">House</a>		 
+		 			<li><a href="/appl2.0/sed/search.asp">SED</a>		 
+				</ul>	
+			</li>
+		 	
+		 	<li><a href="/appl2.0/courier/consol_1.asp">Courier Consolidation</a>		 
+		 	<li><a href="/appl2.0/courier/pending_assigment.asp">Pending Assignment</a>		 
+		  	
+		  	<li><a href="/appl2.0/container/default.asp">Containers</a>		 
+            <li><a href="/appl2.0/templates/default.asp">Templates</a>		 
+			
+            <li><a href="/appl2.0/pickup/default.asp">Delivery Orders</a>
+			<li><a href="/appl2.0/dg/default.asp">Dangerous Goods</a>
+            <li><a href="/appl2.0/settings/scheduleb.asp">Search Schedule B</a>		 
+			<li><a href="#">Utilities</a>
+				<ul>
+		  			<li><a href="/appl2.0/master/myfiles.asp">My Files</a>
+		  			<li><a href="/appl2.0/shipments/pipeline.asp?user=%">Files pending processing</a>
+		  			<li><a href="/appl2.0/shipments/freight_comparison.asp">Freight cost comparison</a>
+		  			<li><a href="/appl2.0/shipments/scan.asp">Scan Batch Processing</a>
+					
+		  			<li><a href="/appl2.0/shipments/auto_bill.asp">Auto shipment rating</a>
+		  			<li><a href="/appl2.0/shipments/batch_billing.asp">Batch billing</a>
+		  			<li><a href="/appl2.0/invoices/whs_billing.asp">Warehouse billing screen</a>
+		  			<li><a href="/appl2.0/invoices/courier_billing.asp">Courier billing screen</a>
+		  			<li><a href="/appl2.0/master/scan_file.asp?action=start">Loading  by file</a>
+		  			<li><a href="/appl2.0/master/scan_container.asp?action=start">Loading  by container</a>
+              		
+				</ul>
+			<li><a href="#">Status&nbsp;- &nbsp;Export</a>
+				<ul>
+		  			<li><a href="/appl2.0/shipments/pending.asp">Houses pending consolidation</a>
+		  			<li><a href="/appl2.0/shipments/closed.asp?user=%">Files pending to be closed</a>
+		  			<li><a href="/appl2.0/shipments/confirmation.asp?user=%">Files pending departure confirmation</a>
+		  			<li><a href="/appl2.0/shipments/pod.asp">Files pending arrival confirmation</a>
+		  			<li><a href="/appl2.0/shipments/pending_billing.asp">Pending billing</a>
+		  			<li><a href="/appl2.0/courier_remote/recloc.asp">View/Receive freight on Remote Location</a>
+				</ul>
+			<li><a href="#">Status&nbsp;- &nbsp;Import</a>
+				<ul>
+		  			<li><a href="/appl2.0/shipments/arrival.asp?user=%">Files pending arrival</a>
+		  			<li><a href="/appl2.0/shipments/radicacion.asp?user=%">Files pending radicacion</a>
+				</ul>
+			<li><a href="#">Downloads</a>
+				<ul>
+		  			<li><a href="/appl2.0/forms/AWB_Conditions_and_Contract.doc">AWB and HAWB conditions of contract.</a>
+		  			<li><a href="/appl2.0/forms/obl.doc">Ocean Bill of Lading terms & conditions.</a>
+               		
+				</ul>
+		</ul>		 
+	</li>
+	
+	<li><a href="/appl2.0/courier/search.asp">Courier</a>
+		<ul>
+            <li><a href="/appl2.0/courier/search.asp">Search</a>	
+            <li><a href="/appl2.0/reports/sel_dates.asp?rep=poe_courier.asp" target="_blank">Proof of Export</a>	
+        	
+		</ul>
+    </li>
+	
+    <li><a href="#">Invoices</a>
+		<ul>
+		 	
+			<li><a href="#">Create</a>
+				<ul>
+					
+                    <li><a href="/appl2.0/invoices/add_invoice.asp">Invoice</a>	
+					<li><a href="/appl2.0/invoices/pending.asp">Pending billing</a>		 
+                    
+					<li><a href="/appl2.0/invoices/add_receipt.asp">Payments</a>		 
+					
+		 		</ul>
+			
+			<li><a href="#">Search</a>
+				<ul>
+		 			<li><a href="/appl2.0/invoices/default.asp">Invoice</a>		 
+					
+					<li><a href="/appl2.0/invoices/search_receipt.asp">Payments</a>		 
+					
+				</ul>
+		  	
+            <li><a href="/appl2.0/invoices/moneyout.asp?branch=SVD">Outstanding Invoices</a>		 
+            	<ul>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=ANU">ANU&nbsp;-&nbsp;Swiftpac A...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=AXA">AXA&nbsp;-&nbsp;Swiftpac A...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=BGI">BGI&nbsp;-&nbsp;SwiftPac B...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=DOM">DOM&nbsp;-&nbsp;SwiftPac D...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=EIS">EIS&nbsp;-&nbsp;SwiftPac B...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=GEO">GEO&nbsp;-&nbsp;SwiftPac G...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=GN2">GN2&nbsp;-&nbsp;Swiftpac G...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=GND">GND&nbsp;-&nbsp;Swiftpac G...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=ITS">ITS&nbsp;-&nbsp;SwiftPac I...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=MCO">MCO&nbsp;-&nbsp;Swiftpac O...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=MIA">MIA&nbsp;-&nbsp;Swiftpac M...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=NYC">NYC&nbsp;-&nbsp;Swiftpac N...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=POS">POS&nbsp;-&nbsp;Swiftpac T...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=SKB">SKB&nbsp;-&nbsp;Swiftpac S...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=SLU">SLU&nbsp;-&nbsp;SwiftPac S...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=SVD">SVD&nbsp;-&nbsp;SwiftPac S...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=SVG">SVG&nbsp;-&nbsp;SwiftPac C...</a>
+					
+					<li><a href="/appl2.0/invoices/moneyout.asp?branch=USA">USA&nbsp;-&nbsp;Swiftpac U...</a>
+					
+				</ul>
+            
+			<li><a href="/appl2.0/invoices/inst_list.asp">Request Invoice</a>		 
+		  	
+            <li><a href="/appl2.0/invoices/shipments_auth.asp">Pending authorization</a>		 
+            <li><a href="/appl2.0/auto/invoice_email.asp" target="_blank">Send Email&nbsp;*Pending*</a>		 
+			
+            <li><a href="/appl2.0/invoices/late_fees.asp">Late Fees</a>		 
+            
+			<li><a href="/appl2.0/settings/currency.asp">Exchange</a>		 
+		  	
+		 	<li><a href="/appl2.0/checkbook/default.asp">Checkbooks</a>		 
+		 	
+		 	<li><a href="#">Export Data</a>		 
+		 		<ul>
+		 			<li><a href="#">Select</a>
+						<ul>
+							<li><a href="/appl2.0/invoices/post_invoices.asp">Invoices</a>		 
+							<li><a href="/appl2.0/invoices/post_receipts.asp">Payments</a>		 
+						</ul>
+		 			<li><a href="#">Previously Selected</a>
+						<ul>
+							<li><a href="/appl2.0/invoices/posting.asp">Invoices</a>		 
+							<li><a href="/appl2.0/invoices/posting_receipts.asp">Payments</a>		 
+						</ul>
+		 		</ul>
+			
+		 	<li><a href="/appl2.0/invoices/crp_1.asp">Credit&nbsp;A/R - A/P</a>		 
+		</ul>
+	</li>
+	
+	<li><a href="#">Bills</a>
+		<ul>
+			
+			<li><a href="#">Create</a>
+				<ul>
+					<li><a href="/appl2.0/bills/add_bill.asp">Bills</a>		 
+		 			
+					<li><a href="/appl2.0/bills/add_check.asp">Payment</a>	
+						 
+				</ul>
+		 	
+			<li><a href="#">Search</a>
+				<ul>
+					<li><a href="/appl2.0/bills/default.asp">Bills</a>		 
+		 			
+					<li><a href="/appl2.0/bills/search_check.asp">Payment</a>		 
+						 
+				</ul>
+			<li><a href="/appl2.0/bills/moneyout.asp">Outstanding Bills</a>		 
+			<li><a href="/appl2.0/bills/auth_checks_pending.asp">Checks Pending Authorization</a>		 
+			
+			<li><a href="/appl2.0/checkbook/default.asp">Checkbooks</a>		 
+			
+			<li><a href="#">Export Data</a>		 
+				<ul>
+					<li><a href="#">Select</a>		 
+						<ul>
+							<li><a href="/appl2.0/bills/post_invoices.asp">Bills</a>		 
+							<li><a href="/appl2.0/bills/post_checks.asp">Checks</a>		 
+						</ul>
+					<li><a href="#">Previously Selected</a>		 
+						<ul>
+							<li><a href="/appl2.0/bills/posting.asp">Bills</a>		 
+							<li><a href="/appl2.0/bills/posting_checks.asp">Checks</a>		 
+						</ul>
+				</ul>
+			
+			<li><a href="/appl2.0/bills/prevision.asp">Prevision</a>		 
+            
+			<li><a href="/appl2.0/bills/assign_cost.asp">Assign Costs</a>		 
+			
+		</ul>
+	</li>
+	
+	<li><a href="#">Accounts</a>
+		<ul>
+			
+			<li><a href="/appl2.0/accounts/add.asp">Create Accounts</a>		 
+			
+			<li><a href="/appl2.0/accounts/default.asp">Search Accounts</a>		 
+			
+			<li><a href="/appl2.0/accounts/mailing_tid.asp">Notifications</a>		 
+			
+			<li><a href="/appl2.0/accounts/consolidation.asp">Merge Accounts</a>		 
+			
+			<li><a href="/appl2.0/accounts/rates_admin.asp">Rates</a>		 
+			
+		</ul>
+	</li>
+	
+	<li><a href="#">Reports</a>
+		<ul>
+			<li><a href="#" onClick="GP_AdvOpenWindow('/appl2.0/reports/snapshot.asp','Snapshot','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',750,600,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">Snapshot</a>
+			
+			<li><a href="#">Warehouse</a>
+				<ul>
+					
+                    <li><a href="/appl2.0/warehouse/report.asp" target="_blank">Detailed</a>
+					<li><a href="/appl2.0/reports/sel_yearcomparison_n.asp" target="_blank">Year Comparison</a>
+					<li><a href="/appl2.0/reports/sel_warehouse.asp?rep=statistics_warehouse.asp" target="_blank">Statistics</a>
+					<li><a href="/appl2.0/reports/sel_warehouse.asp?rep=whs_in_out.asp" target="_blank">Transaction details</a>
+					<li><a href="/appl2.0/reports/commission_whs_agent.asp" target="_blank">Commission Report</a>
+					
+				</ul>
+            </li>
+            
+			<li><a href="#">Accounts</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_accounts.asp?rep=../print/report_accounts.asp" target="_blank">Detailed</a>
+					<li><a href="/appl2.0/reports/clients_inactive.asp" target="_blank">Inactive</a>
+					<li><a href="/appl2.0/reports/sel_accounts.asp?rep=../print/avery_clients.asp" target="_blank">Label&nbsp;(Avery 5160)</a>
+					
+					<li><a href="/appl2.0/print/account_clients.asp" target="_blank">Client's Listing</a>
+					<li><a href="/appl2.0/print/account_vendors.asp" target="_blank">Vendor's Listing</a>
+            		
+					<li><a href="/appl2.0/print/account_shippers.asp" target="_blank">Shipper's Listing</a>
+					<li><a href="/appl2.0/print/account_consignee.asp" target="_blank">Consignee's Listing</a>
+					<li><a href="/appl2.0/print/account_known.asp" target="_blank">Known Shipper's Listing</a>
+					
+                    <li><a href="/appl2.0/reports/sel_agent.asp" target="_blank">List by Agent</a>
+					<li><a href="/appl2.0/reports/sel_country.asp" target="_blank">List by Country</a>
+					<li><a href="/appl2.0/reports/sel_salesperson.asp" target="_blank">List by Salesperson</a>
+				</ul>
+			</li>
+			
+			<li><a href="#">Shipments</a>
+				<ul>
+                    <li><a href="#">Master</a>
+                        <ul>
+                            
+                            <li><a href="/appl2.0/reports/sel_master.asp?rep=report_master.asp" target="_blank">Detailed</a>
+                            
+                            <li><a href="/appl2.0/reports/sel_master.asp?rep=report_master_sum.asp" target="_blank">Simple</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">House</a>
+                        <ul>
+                            <li><a href="/appl2.0/reports/sel_house.asp?rep=report_house.asp" target="_blank">Detailed</a>
+                            <li><a href="/appl2.0/reports/sel_house.asp?rep=report_house_sum.asp" target="_blank">Simple</a>
+                        </ul>
+                    </li>
+					<li><a href="/appl2.0/reports/processing_shipments.asp" target="_blank">Statistics</a>
+					<li><a href="/appl2.0/reports/status.asp">Status</a>
+					
+                    <li><a href="/appl2.0/reports/sel_master_pl.asp" target="_blank">Profit by File</a>
+					<li><a href="/appl2.0/reports/files_pending_invoice.asp" target="_blank">Pending billing</a>
+					<li><a href="/appl2.0/reports/invoice_date.asp" target="_blank">Invoice/Date</a>
+					
+				</ul>
+			</li>
+			
+			<li><a href="#">Invoices</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_invoices.asp?rep=../print/report_invoices_det.asp" target="_blank">Detailed</a>
+					<li><a href="/appl2.0/reports/sel_invoices.asp?rep=../print/report_invoices_sum.asp" target="_blank">Simple</a>
+					<li><a href="/appl2.0/reports/sel_invoices.asp?rep=../print/report_inv_summary.asp" target="_blank">Sales by G/L</a>
+					<li><a href="/appl2.0/reports/sel_invoices.asp?rep=../print/report_inv_summary_cc.asp" target="_blank">Sales by G/L&nbsp;(Cost Center)</a>
+					<li><a href="/appl2.0/reports/sel_dates.asp?rep=receipts.asp" target="_blank">Payments</a>
+					<li><a href="/appl2.0/reports/sel_dates.asp?rep=receipts_user.asp" target="_blank">Payments&nbsp;[User]</a>
+					<li><a href="/appl2.0/reports/sel_dates.asp?rep=receipts_reference.asp" target="_blank">Payments&nbsp;[Reference]</a>
+					<li><a href="/appl2.0/reports/sel_dates.asp?rep=sales_client.asp" target="_blank">Average</a>
+					<li><a href="/appl2.0/reports/sel_yearcomparison.asp?rep=../reports/year_sales.asp" target="_blank">Yearly Comparison</a>
+					<li><a href="/appl2.0/reports/sel_yearcomparison.asp?rep=../reports/revenue_client_year.asp" target="_blank">"&nbsp;Client</a>
+					<li><a href="/appl2.0/reports/sel_yearcomparison.asp?rep=../reports/year_is.asp" target="_blank">"&nbsp;Gross Profit</a>
+				<li><a href="/appl2.0/reports/commission.asp" target="_blank">Commission Report</a>
+                  <li><a href="#">Outstanding Invoices</a>
+                        <ul>
+                            <li><a href="/appl2.0/reports/sel_outstanding.asp?rep=../print/outstanding_receivables.asp" target="_blank">Detailed</a>
+                            <li><a href="/appl2.0/reports/sel_outstanding.asp?rep=../print/outstanding_receivables_sum.asp" target="_blank">Simple</a>
+            				
+                            <li><a href="/appl2.0/reports/sel_is.asp?rep=outstanding_invoices_file.asp" target="_blank">File</a>
+                            
+                        </ul>
+                  </li>
+					<li><a href="/appl2.0/reports/sel_invoices.asp?rep=deposit_register.asp" target="_blank">Deposits</a>
+					
+				</ul>
+			</li>
+			
+			<li><a href="#">Bills</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_bills.asp?rep=bills_1.asp" target="_blank">Detailed</a>
+					<li><a href="/appl2.0/reports/sel_bills.asp?rep=bills_2.asp" target="_blank">Purchases by G/L account</a>
+					<li><a href="/appl2.0/reports/sel_bills.asp?rep=bills_2_cc.asp" target="_blank">Purchases by G/L account&nbsp;(Cost Center)</a>
+					<li><a href="/appl2.0/reports/sel_is.asp?rep=general_expenses.asp" target="_blank">General Expenses</a>
+					<li><a href="/appl2.0/reports/sel_yearcomparison.asp?rep=../reports/year_expenses.asp" target="_blank">Yearly Comparison</a>
+					<li><a href="/appl2.0/reports/sel_outstanding.asp?rep=../print/outstanding_payables.asp" target="_blank">Outstanding Bills</a>
+					<li><a href="/appl2.0/reports/sel_bills.asp?rep=check_register.asp" target="_blank">Check Register</a>
+           			
+					<li><a href="/appl2.0/reports/sel_cass.asp?rep=cass.asp" target="_blank">AWB Cass Report</a>
+                    
+				</ul>
+			</li>
+			
+			<li><a href="#">Payroll</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_payroll_1.asp" target="_blank">Employee time schedule</a>
+					<li><a href="/appl2.0/reports/sel_bills.asp?rep=bills_3.asp" target="_blank">Employee Deductions</a>
+				</ul>
+			</li>
+			
+			<li><a href="#">Financials</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_is.asp?rep=income_statement.asp" target="_blank">Income Statement</a>
+					<li><a href="/appl2.0/reports/sel_is.asp?rep=cc.asp" target="_blank">Cost Center</a>
+					<li><a href="/appl2.0/reports/sel_is.asp?rep=balance.asp" target="_blank">Balance Sheet</a>
+					<li><a href="/appl2.0/reports/sel_is_stats.asp?rep=statistics_is.asp" target="_blank">Statistics</a>
+					
+				</ul>
+			</li>
+			
+			<li><a href="#">Orders</a>
+				<ul>
+					<li><a href="/appl2.0/reports/sel_oo.asp" target="_blank">Open Orders</a>
+					<li><a href="/appl2.0/reports/sel_co.asp" target="_blank">Closed Orders</a>
+					<li><a href="/appl2.0/reports/sel_ro.asp" target="_blank">Repair Orders</a>
+				</ul>
+			</li>
+					  
+	</ul>
+	</li>
+	
+	<li><a href="#">Settings</a>
+		<ul>
+			<li><a href="/appl2.0/settings/company.asp">Company</a>		 
+		  	
+            <li><a href="#">Users</a>
+                <ul>
+            		<li><a href="/appl2.0/settings/add_user.asp">Create</a>		 
+            		<li><a href="/appl2.0/settings/users.asp">Search</a>		 
+            		<li><a href="/appl2.0/settings/idcards.asp">Print ID cards</a>		 
+		 		</ul>
+            </li>
+			
+		  	<li><a href="/appl2.0/settings/carriers.asp">Carriers</a>		 
+		 	<li><a href="/appl2.0/settings/ports.asp">Ports</a>		 
+		 	<li><a href="/appl2.0/settings/incidents.asp">Tracking Events</a>		 
+		 	
+		 	<li><a href="/appl2.0/gl/default.asp">General Ledger</a>		 
+			
+            <li><a href="/appl2.0/settings/log.asp">System Log</a>		 
+		  	
+			<li><a href="#">Services</a>
+            <ul>
+                <li><a href="/appl2.0/settings/svs.asp">Cargo</a>		 
+				
+                <li><a href="/appl2.0/settings/courier.asp">Courier Services</a>		 
+                
+                <li><a href="/appl2.0/settings/mail_services.asp">Mail</a>		 
+                <li><a href="/appl2.0/se/default.asp">Special Services</a>		 
+                <li><a href="/appl2.0/settings/rates.asp">Rating Schedule</a>		 
+                <li><a href="/appl2.0/settings/service.asp">Shipment Configurator</a>		 
+                <li><a href="/appl2.0/settings/commodity.asp">Commodity </a>		 
+                	 
+		  	</ul>
+			
+		  	<li><a href="/appl2.0/settings/currency.asp">Exchange</a>		 
+			<li><a href="/appl2.0/settings/milestones.asp">Milestones</a>		 
+		  	<li><a href="/appl2.0/settings/scheduleb.asp">Schedule B</a>		 
+		  	
+            <li><a href="/appl2.0/settings/website.asp">Website Maintenance</a>		 
+		</ul>
+	</li>
+	
+
+<!-- Productivity Tools -->
+	
+    <li><a href="#">Utilities</a>
+		<ul>
+            
+            <li><a href="/appl2.0/misc/default.asp">Jobs</a></li>	 
+             
+            <li><a href="/appl2.0/letters/default.asp">Letters</a></li>	 
+			
+            <li><a href="/appl2.0/assets/">Assets</a></li>
+            	 
+            <li><a href="#" onClick="GP_AdvOpenWindow('/appl2.0/visitors/default.asp','Visitor','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',400,400,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">Access </a></li>	 
+            <li><a href="/appl2.0/bug/">Message Center</a>
+			<li><a href="/appl2.0/purchasing/default.asp">Purchase Request</a>
+			<li><a href="/appl2.0/budget/default.asp">Budget</a>
+			<li><a href="/appl2.0/pa/default.asp">Purchase Authorization</a>
+			<li><a href="/appl2.0/events/default.asp">Events</a>
+            
+	</ul>
+	
+	<li><a href="/appl2.0/po/">Orders</a>
+	
+	</li>
+	
+    <li><a href="/m/appl/index/default.asp" target="_blank">Mobile Version</a></li>
+	
+</ul>
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+</script>
+
+
+</td>
+</tr>
+</table>
+
+<br />
+	  </td>
+      <td valign="top"><table width="100%"  border="0" cellpadding="5" cellspacing="0" class="heading">
+        <tr>
+          <td valign="top"><span class="smallform">Create Warehouse</span>&nbsp;</td>
+        </tr>
+      </table>
+	    <form name="form1">
+	      <table width="100%"  border="0" cellpadding="5" cellspacing="0" class="ntext">
+            <tr>
+              <td><div align="left" class="etext"></div></td>
+              <td><div align="right">
+                <input name="measures_type" type="hidden" id="measures_type" value="">
+                <input name="weight_type" type="hidden" id="weight_type" value="lbs">
+<input name="action" type="hidden" id="action" value="process">
+                &nbsp;&nbsp;&nbsp;<img src="../../icons/list-7@2x.png" width="25" title="Upload files" border="0" align="absmiddle" onClick="GP_AdvOpenWindow('comm.asp?id=141101','Commodity','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',700,450,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">&nbsp;
+                
+                <img src="../../icons/box-7@2x.png" width="25" title="Upload files" border="0" align="absmiddle" onClick="document.getElementById('wizard').style.display='block'; document.getElementById('fade').style.display='block'">&nbsp;
+                
+                <a href="#" onClick="GP_AdvOpenWindow('../upload_multiple.asp?action=start&id=141101&type=W&directory=Warehouse','Upload','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',570,400,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/paper-clip-mini@2x.png" width="25" title="Upload files" border="0" align="absmiddle"></a><a href="#" onClick="GP_AdvOpenWindow('upload_files.asp?id=141101','Upload','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,channelmode=no,directories=no',500,300,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"></a>&nbsp;<a href="#" onClick="GP_AdvOpenWindow('../remarks.asp?id=141101&line=WAREHOUSE','Remarks','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',500,300,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/message-multiple-7@2x.png" width="25" title="Remarks" border="0" align="absmiddle"></a>&nbsp;<a href="javascript:document.form1.submit()"><img src="../../icons/document-save@2x.png" width="25" border="0" align="absmiddle"></a></div></td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellpadding="5" cellspacing="0" class="insert">
+            <tr>
+              <td width="50%" valign="top"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                <tr>
+                  <td width="75">Branch</td>
+                  <td><select name="branch" class="ntext" id="branch" onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="1">
+                    
+                    <option value="ANU"  >ANU&nbsp;-&nbsp;Swiftpac ANU</option>
+                    
+                    <option value="AXA"  >AXA&nbsp;-&nbsp;Swiftpac AXA</option>
+                    
+                    <option value="BGI"  >BGI&nbsp;-&nbsp;SwiftPac BGI</option>
+                    
+                    <option value="DOM"  >DOM&nbsp;-&nbsp;SwiftPac DOM</option>
+                    
+                    <option value="EIS"  >EIS&nbsp;-&nbsp;SwiftPac BVI</option>
+                    
+                    <option value="GEO"  >GEO&nbsp;-&nbsp;SwiftPac GUY</option>
+                    
+                    <option value="GN2"  >GN2&nbsp;-&nbsp;Swiftpac Grenada 2</option>
+                    
+                    <option value="GND"  >GND&nbsp;-&nbsp;Swiftpac GND</option>
+                    
+                    <option value="ITS"  >ITS&nbsp;-&nbsp;SwiftPac ITSD</option>
+                    
+                    <option value="MCO"  >MCO&nbsp;-&nbsp;Swiftpac Orlando</option>
+                    
+                    <option value="MIA"  >MIA&nbsp;-&nbsp;Swiftpac MIA</option>
+                    
+                    <option value="NYC"  >NYC&nbsp;-&nbsp;Swiftpac NY</option>
+                    
+                    <option value="POS"  >POS&nbsp;-&nbsp;Swiftpac TNT</option>
+                    
+                    <option value="SKB"  >SKB&nbsp;-&nbsp;Swiftpac SKB</option>
+                    
+                    <option value="SLU"  >SLU&nbsp;-&nbsp;SwiftPac SLU</option>
+                    
+                    <option value="SVD" SELECTED >SVD&nbsp;-&nbsp;SwiftPac SVD</option>
+                    
+                    <option value="SVG"  >SVG&nbsp;-&nbsp;SwiftPac City Office</option>
+                    
+                    <option value="USA"  >USA&nbsp;-&nbsp;Swiftpac USA</option>
+                    
+                  </select></td>
+                </tr>
+                <tr>
+                  <td>Date</td>
+                  <td><input name="date" type="text" class="ntext" id="datepicker" value="2016/8/21" size="10" maxlength="10" onfocus="checkColor1(this)" onblur="checkColor2(this)" tabindex="2">
+                  
+                    
+                    <select name="hour" class="ntext" id="hour" tabindex="3">
+                      <option value="0" >0</option>
+                      <option value="1" >1</option>
+                      <option value="2" >2</option>
+                      <option value="3" >3</option>
+                      <option value="4" >4</option>
+                      <option value="5" >5</option>
+                      <option value="6" >6</option>
+                      <option value="7" >7</option>
+                      <option value="8" >8</option>
+                      <option value="9" >9</option>
+                      <option value="10" >10</option>
+                      <option value="11" >11</option>
+                      <option value="12" >12</option>
+                      <option value="13" >13</option>
+                      <option value="14" >14</option>
+                      <option value="15" >15</option>
+                      <option value="16" >16</option>
+                      <option value="17" >17</option>
+                      <option value="18" >18</option>
+                      <option value="19" >19</option>
+                      <option value="20" >20</option>
+                      <option value="21" >21</option>
+                      <option value="22" selected>22</option>
+                      <option value="23" >23</option>
+                    </select>
+                    <select name="minute" class="ntext" id="minute" tabindex="4">
+                      <option value="00" >00</option>
+                      <option value="01" >01</option>
+                      <option value="02" >02</option>
+                      <option value="03" >03</option>
+                      <option value="04" >04</option>
+                      <option value="05" >05</option>
+                      <option value="06" >06</option>
+                      <option value="07" >07</option>
+                      <option value="08" >08</option>
+                      <option value="09" >09</option>
+                      <option value="10" >10</option>
+                      <option value="11" >11</option>
+                      <option value="12" >12</option>
+                      <option value="13" >13</option>
+                      <option value="14" >14</option>
+                      <option value="15" >15</option>
+                      <option value="16" >16</option>
+                      <option value="17" >17</option>
+                      <option value="18" >18</option>
+                      <option value="19" >19</option>
+                      <option value="20" >20</option>
+                      <option value="21" >21</option>
+                      <option value="22" >22</option>
+                      <option value="23" >23</option>
+                      <option value="24" >24</option>
+                      <option value="25" >25</option>
+                      <option value="26" >26</option>
+                      <option value="27" >27</option>
+                      <option value="28" >28</option>
+                      <option value="29" >29</option>
+                      <option value="30" >30</option>
+                      <option value="31" >31</option>
+                      <option value="32" >32</option>
+                      <option value="33" >33</option>
+                      <option value="34" >34</option>
+                      <option value="35" >35</option>
+                      <option value="36" >36</option>
+                      <option value="37" >37</option>
+                      <option value="38" >38</option>
+                      <option value="39" >39</option>
+                      <option value="40" >40</option>
+                      <option value="41" >41</option>
+                      <option value="42" >42</option>
+                      <option value="43" >43</option>
+                      <option value="44" >44</option>
+                      <option value="45" >45</option>
+                      <option value="46" >46</option>
+                      <option value="47" >47</option>
+                      <option value="48" >48</option>
+                      <option value="49" >49</option>
+                      <option value="50" >50</option>
+                      <option value="51" >51</option>
+                      <option value="52" >52</option>
+                      <option value="53" selected>53</option>
+                      <option value="54" >54</option>
+                      <option value="55" >55</option>
+                      <option value="56" >56</option>
+                      <option value="57" >57</option>
+                      <option value="58" >58</option>
+                      <option value="59" >59</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Terms</td>
+                  <td><select name="terms" class="ntext" id="terms" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="5">
+                    <option value="P" >PREPAID</option>
+                    <option value="C" selected>COLLECT</option>
+                  </select></td>
+                </tr>
+              </table></td>
+              <td valign="top"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+
+                <tr>
+                  <td width="75">Account</td>
+                  <td><input name="box_number" type="text" class="large" id="box_number" value="" size="9"  onFocus="checkColor1(this)" onBlur="checkColor2(this)" on onDblClick="GP_AdvOpenWindow('../accounts/lookup_account.asp','Search','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',500,300,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue" tabindex="6">
+                    <input name="button" type="submit" class="ntext-button-blue-small" id="button" value="LOOKUP">
+					
+                    </td>
+                </tr>
+                <tr>
+                  <td>Number</td>
+                  <td><span class="large">141101&nbsp;
+                    <input name="id" type="hidden" id="id" value="141101">
+                    <input name="warehouse_number" type="hidden" id="warehouse_number" value="141101">
+                  </span></td>
+                </tr>
+                <tr>
+                  <td>Instructions</td>
+                  <td><select name="shipping_instructions" class="ntext" id="shipping_instructions" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="7">
+                    <option value="" SELECTED>--</option>
+                    <option value="A" >AIR</option>
+                    <option value="O" >OCEAN</option>
+                    <option value="T" >GROUND</option>
+                    
+                    <option value="E" >EXPRESS</option>
+                    
+                  </select>
+                    <select name="shipping_type" class="ntext" id="shipping_type" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="8">
+                      
+                      <option value="D"  >SHIP</option>
+                      
+                      <option value="C"  >CONSOLIDATE</option>
+                      
+                      <option value="R"  >REPACK</option>
+                      
+                      <option value="" disabled>----------</option>
+                      
+                      <option value="8"  >MAILBOX FROM MIA TO BGI&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="9"  >MAILBOX FROM MIA TO EIS&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="7"  >MAILBOX FROM MIA TO SLU&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="6"  >MAILBOX FROM MIA TO SVD&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="4"  >NEXT DAY TO TORTOLA-DOCUM&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="11"  >ST. VINCENT TO SAN JUAN -&nbsp;-&nbsp;SVD</option>
+                      
+                      <option value="10"  >ST.VINCENT TO BARBADOS -&nbsp;-&nbsp;SVD</option>
+                      
+                    </select>
+                    
+                    
+                    </td>
+                </tr>
+              </table>
+              <div align="right"></div></td>
+            </tr>
+          </table>
+          <br>
+          <table width="100%" border="0" cellpadding="5" cellspacing="0" class="insert">
+            <tr>
+              <td width="60%" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Shipper</td>
+                  <td><span class="smallform"><a href="#" onClick="GP_AdvOpenWindow('../accounts/lookup.asp?ref1=shipper_id&ref2=shipper&ref3=shipper_address1&ref4=shipper_address2&ref5=shipper_address3','Lookup','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',500,250,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/search-7@2x.png" width="15" height="15" border="0" align="absmiddle" title="Lookup"></a></span>
+                    <input name="shipper_id" type="text" class="ntext" id="shipper_id" value="" size="4" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="9">
+                    <input name="shipper" type="text" class="ntext" id="shipper" value="" size="35" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="10">
+                    <input name="shipper_address1" type="hidden" id="shipper_address1">
+                    <input name="shipper_address2" type="hidden" id="shipper_address2">
+                    <input name="shipper_address3" type="hidden" id="shipper_address3"></td>
+                </tr>
+                <tr>
+                  <td width="75">Consignee</td>
+                  <td><span class="smallform"><a href="#" onClick="GP_AdvOpenWindow('../accounts/lookup.asp?ref1=consignee_id&ref2=consignee&ref3=consignee_address1&ref4=consignee_address2&ref5=consignee_address3','Lookup','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',500,250,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/search-7@2x.png" width="15" height="15" border="0" align="absmiddle" title="Lookup"></a></span>
+                    <input name="consignee_id" type="text" class="ntext" id="consignee_id" value="" size="4" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="11">
+                    <input name="consignee" type="text" class="ntext" id="consignee" value="" size="35" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="12">
+                    <input name="consignee_address1" type="hidden" id="consignee_address1">
+                    <input name="consignee_address2" type="hidden" id="consignee_address2">
+                    <input name="consignee_address3" type="hidden" id="consignee_address3"></td>
+                </tr>
+                <tr>
+                  <td>Agent</td>
+                  <td><span class="smallform"><a href="#" onClick="GP_AdvOpenWindow('../accounts/lookup.asp?ref1=account_id&ref2=account&ref3=account_address1&ref4=account_address2&ref5=account_address3','Lookup','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',500,250,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/search-7@2x.png" width="15" height="15" border="0" align="absmiddle" title="Lookup"></a></span>
+                    <input name="account_id" type="text" class="ntext" id="account_id" value="" size="4" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="13">
+                    <input name="account" type="text" class="ntext" id="account" value="" size="35" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="14">
+                    <input name="account_address1" type="hidden" id="account_address1">
+                    <input name="account_address2" type="hidden" id="account_address2">
+                    <input name="account_address3" type="hidden" id="account_address3"></td>
+                </tr>
+                <tr>
+                  <td>Bill to</td>
+                  <td><span class="smallform"><a href="#" onClick="GP_AdvOpenWindow('../accounts/lookup.asp?ref1=account_id&ref2=account&ref3=account_address1&ref4=account_address2&ref5=account_address3','Lookup','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,channelmode=no,directories=no',500,250,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue"><img src="../../icons/search-7@2x.png" width="15" height="15" border="0" align="absmiddle" title="Lookup"></a></span>
+                    <input name="billto_id" type="text" class="ntext" id="billto_id" value="0" size="4" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="17">
+                    <input name="billto" type="text" class="ntext" id="billto" value="" size="35" onfocus="checkColor1(this)" onblur="checkColor2(this)"  tabindex="18">
+                    <input name="billto_address1" type="hidden" id="billto_address1">
+                    <input name="billto_address2" type="hidden" id="account_address5">
+                    <input name="billto_address3" type="hidden" id="account_address6"></td>
+                </tr>
+                <tr>
+                  <td>Delivered by</td>
+                  <td>
+                    <select name="carrier" class="ntext" id="carrier" tabindex="19">
+                      <option value="---????---" selected>---????---</option>
+                      
+                      <option value=" LASERSHIP"  > LASERSHIP</option>
+                      
+                      <option value=", FEDEX"  >, FEDEX</option>
+                      
+                      <option value=", UPS"  >, UPS</option>
+                      
+                      <option value="94001102008"  >94001102008</option>
+                      
+                      <option value="AAA COOPER"  >AAA COOPER</option>
+                      
+                      <option value="ABF"  >ABF</option>
+                      
+                      <option value="ABF FREIGHT"  >ABF FREIGHT</option>
+                      
+                      <option value="ADL DELIVER"  >ADL DELIVER</option>
+                      
+                      <option value="AIR"  >AIR</option>
+                      
+                      <option value="AIR MAIL"  >AIR MAIL</option>
+                      
+                      <option value="ALL DADE LA"  >ALL DADE LA</option>
+                      
+                      <option value="Amazon"  >Amazon</option>
+                      
+                      <option value="AVERITT"  >AVERITT</option>
+                      
+                      <option value="BASIC"  >BASIC</option>
+                      
+                      <option value="BENJAMIN"  >BENJAMIN</option>
+                      
+                      <option value="CENTRAL TRA"  >CENTRAL TRA</option>
+                      
+                      <option value="CEVA"  >CEVA</option>
+                      
+                      <option value="CHINA POST"  >CHINA POST</option>
+                      
+                      <option value="CONTINENTAL"  >CONTINENTAL</option>
+                      
+                      <option value="CONWAY"  >CONWAY</option>
+                      
+                      <option value="COURIER SER"  >COURIER SER</option>
+                      
+                      <option value="dave rowe"  >dave rowe</option>
+                      
+                      <option value="DELIVERY GU"  >DELIVERY GU</option>
+                      
+                      <option value="DEUTSCHE PO"  >DEUTSCHE PO</option>
+                      
+                      <option value="DHL"  >DHL</option>
+                      
+                      <option value="DIRECT COAS"  >DIRECT COAS</option>
+                      
+                      <option value="ecfm"  >ecfm</option>
+                      
+                      <option value="ECONOCARIBE"  >ECONOCARIBE</option>
+                      
+                      <option value="EMS"  >EMS</option>
+                      
+                      <option value="ESQUIRE EXP"  >ESQUIRE EXP</option>
+                      
+                      <option value="FASC"  >FASC</option>
+                      
+                      <option value="FEDEX"  >FEDEX</option>
+                      
+                      <option value="FOOTPRINTS"  >FOOTPRINTS</option>
+                      
+                      <option value="HONG KONG P"  >HONG KONG P</option>
+                      
+                      <option value="HONGKONG PO"  >HONGKONG PO</option>
+                      
+                      <option value="HOUSE OF AP"  >HOUSE OF AP</option>
+                      
+                      <option value="IKO PRODUCT"  >IKO PRODUCT</option>
+                      
+                      <option value="JAIR CORP."  >JAIR CORP.</option>
+                      
+                      <option value="KOREA POST"  >KOREA POST</option>
+                      
+                      <option value="Laser Ship"  >Laser Ship</option>
+                      
+                      <option value="LASERSHIP"  >LASERSHIP</option>
+                      
+                      <option value="MARBLE SYST"  >MARBLE SYST</option>
+                      
+                      <option value="MARVIN RODG"  >MARVIN RODG</option>
+                      
+                      <option value="N/A"  >N/A</option>
+                      
+                      <option value="NAPOLEON TR"  >NAPOLEON TR</option>
+                      
+                      <option value="NATIONAL PR"  >NATIONAL PR</option>
+                      
+                      <option value="OCEAN"  >OCEAN</option>
+                      
+                      <option value="OTHER"  >OTHER</option>
+                      
+                      <option value="OUR DRIVER"  >OUR DRIVER</option>
+                      
+                      <option value="OUTSIDE VEN"  >OUTSIDE VEN</option>
+                      
+                      <option value="OWNER DROP"  >OWNER DROP</option>
+                      
+                      <option value="PARTICULAR"  >PARTICULAR</option>
+                      
+                      <option value="PICKUP"  >PICKUP</option>
+                      
+                      <option value="PICKUP AT A"  >PICKUP AT A</option>
+                      
+                      <option value="RELIGION UN"  >RELIGION UN</option>
+                      
+                      <option value="RICKY"  >RICKY</option>
+                      
+                      <option value="RL CARRIERS"  >RL CARRIERS</option>
+                      
+                      <option value="ROYAL MAIL"  >ROYAL MAIL</option>
+                      
+                      <option value="SANCHEZ&HAR"  >SANCHEZ&HAR</option>
+                      
+                      <option value="Sandra Jones"  >Sandra Jones</option>
+                      
+                      <option value="SELF"  >SELF</option>
+                      
+                      <option value="SHIPPER"  >SHIPPER</option>
+                      
+                      <option value="SPRINGFIELD"  >SPRINGFIELD</option>
+                      
+                      <option value="STORE PICKU"  >STORE PICKU</option>
+                      
+                      <option value="SWIFPAC NY"  >SWIFPAC NY</option>
+                      
+                      <option value="SWIFTPAC"  >SWIFTPAC</option>
+                      
+                      <option value="SWIFTPAC LO"  >SWIFTPAC LO</option>
+                      
+                      <option value="SWIFTPAC P/"  >SWIFTPAC P/</option>
+                      
+                      <option value="TNT AIR"  >TNT AIR</option>
+                      
+                      <option value="TOTAL SUPPL"  >TOTAL SUPPL</option>
+                      
+                      <option value="TRUCKMAX"  >TRUCKMAX</option>
+                      
+                      <option value="TTR SHIPPIN"  >TTR SHIPPIN</option>
+                      
+                      <option value="UPS"  >UPS</option>
+                      
+                      <option value="UPS FREIGHT"  >UPS FREIGHT</option>
+                      
+                      <option value="US POSTAL"  >US POSTAL</option>
+                      
+                      <option value="USP"  >USP</option>
+                      
+                      <option value="USPS"  >USPS</option>
+                      
+                      <option value="USPS (Postal Services)"  >USPS (Postal Service</option>
+                      
+                      <option value="USPS(Postal Services)"  >USPS(Postal Services</option>
+                      
+                      <option value="USPS/UPS"  >USPS/UPS</option>
+                      
+                      <option value="YELLOW FREI"  >YELLOW FREI</option>
+                      
+                      </select>
+                    
+                    <input name="carrier2" type="text" class="ntext" id="carrier2" value="" size="15" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="20"></td>
+                </tr>
+                <tr>
+                  <td>Condition</td>
+                  <td><select name="condition" class="ntext" id="condition">
+                    <option value="1" selected>GOOD</option>
+                    <option value="2" >DAMAGED</option>
+                    </select></td>
+                </tr>
+              </table></td>
+              <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="2">
+                <tr>
+                  <td>Reference</td>
+                  <td><input name="reference" type="text" class="ntext" id="reference" value="" size="25" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="22"></td>
+                </tr>
+                <tr>
+                  <td width="75">Origin</td>
+                  <td><input name="origin" type="text" class="ntext" id="origin" value="ITS" size="3" maxlength="3" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="23">
+                    &nbsp;&nbsp;&nbsp;Destination
+                    <input name="destination" type="text" class="ntext" id="destination" value="" size="3" maxlength="3" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="24"></td>
+                </tr>
+                <tr>
+                  <td>PO</td>
+                  <td><input name="po" type="text" class="ntext" id="po" value="N/A" size="10" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="25"></td>
+                </tr>
+                <tr>
+                  <td>Invoice</td>
+                  <td><input name="inv" type="text" class="ntext" id="inv" value="N/A" size="8" onFocus="checkColor1(this)" onBlur="checkColor2(this)"  tabindex="26">
+                    Value
+                    <input name="inv_value" type="text" class="formnum" id="inv_value" value="0.00" size="8" onFocus="checkColor1(this)" onBlur="checkColor2(this);" tabindex="27"></td>
+                </tr>
+                <tr>
+                  <td><div align="right">
+                    <input name="sed" type="checkbox" disabled id="sed" tabindex="28" value="Y" >
+                  </div></td>
+                  <td>SED
+                    &nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><div align="right">
+                    <input  name="sli" type="checkbox" id="sli" value="Y" tabindex="29">
+                    </div></td>
+                  <td>Documents
+                    &nbsp;&nbsp;<input  name="fragile" type="checkbox" id="fragile" value="Y" tabindex="30">
+                    Fragile</td>
+                </tr>
+                <tr>
+                  <td><div align="right">
+                    <input  name="hazmat" type="checkbox" id="hazmat" value="Y">
+                  </div></td>
+                  <td>Dangerous Goods&nbsp;&nbsp;
+                    <input  name="flag5" type="checkbox" id="flag5" value="Y" tabindex="30">
+                    Repack</td>
+                </tr>
+                <tr>
+                  <td><div align="right">
+                    <input checked="checked" name="insurance" type="checkbox" id="insurance" value="Y">
+                  </div></td>
+                  <td>Insurance
+                    &nbsp;<input name="insurance_value" type="text" class="formnum" id="insurance_value"  tabindex="10" onFocus="checkColor1(this)" onBlur="checkColor2(this)" value="0.00" size="10"></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table>
+          <br>
+          <table width="100%" border="0" cellpadding="1" cellspacing="0" class="insert">
+            <tr>
+              <td><table width="100%" border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                  <td width="250" bgcolor="#CCCCCC">Description</td>
+                  <td width="200" bgcolor="#CCCCCC">Comments</td>
+                  <td bgcolor="#CCCCCC">&nbsp;</td>
+                  </tr>
+                <tr>
+                  <td valign="top">
+                    <textarea name="description" cols="40" rows="5" class="ntext" id="description"  onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="30"></textarea>
+                    </td>
+                  <td valign="top"><textarea name="comments" cols="30" rows="5" class="ntext" id="comments"  onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="30"></textarea></td>
+                  <td valign="top"></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          <br>
+          <table width="100%" border="0" cellpadding="1" cellspacing="0" class="insert">
+            <tr>
+              <td valign="top"><table width="100%" border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                  <td bgcolor="#CCCCCC"><div align="center">Pieces</div></td>
+                  <td bgcolor="#CCCCCC">&nbsp;</td>
+                  <td bgcolor="#CCCCCC"><div align="center">Weight<br>(lb.)</div></td>
+                  <td bgcolor="#CCCCCC"><div align="center">Length<br>(in.)</div></td>
+                  <td bgcolor="#CCCCCC"><div align="center">Width<br>(in.)</div></td>
+                  <td bgcolor="#CCCCCC"><div align="center">Height<br>(in.)</div></td>
+                  <td bgcolor="#CCCCCC"><div align="center">Units</div></td>
+                  <td bgcolor="#CCCCCC"><div align="center">Reference</div></td>
+                  <td width="18" bgcolor="#CCCCCC"><div align="center"><a href="javascript:document.form1.submit()"><img src="../../icons/dustbin-7@2x.png" width="20" height="20" border="0"></a></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div align="center">
+                    
+                    <input name="pieces" type="text" class="ntext" id="pieces" size="2" onfocus="checkColor1(this)" onblur="checkColor2(this)" tabindex="35">
+                    
+                  </div></td>
+                  <td><div align="center">
+                    <select name="piece_type" class="ftext" id="piece_type" tabindex="36">
+                      <option value="PIECES">PIECES</option>
+                      <option value="CARTONS">CARTONS</option>
+                      <option value="SKIDS">SKIDS</option>
+                      <option value="BUNDLES">BUNDLES</option>
+                      <option value="ROLLS">ROLLS</option>
+                      <option value="CRATES">CRATES</option>
+                      <option value="PALLETS">PALLETS</option>
+                      <option value="DRUMS">DRUMS</option>
+                      <option value="BOX" >BOX</option>
+                      <option value="ENVELOPE">ENVELOPE</option>
+                      <option value="VEHICLE">VEHICLE</option>
+                    
+                    </select>
+                  </div></td>
+                  <td><div align="center">
+                    <input name="weight" type="text" class="formnum" id="weight" size="4" onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="38">
+                  </div></td>
+                  <td><div align="center">
+                      <input name="length" type="text" class="formnum" id="length" size="4" onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="39">
+                  </div></td>
+                  <td><div align="center">
+                      <input name="width" type="text" class="formnum" id="width" size="4" onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="40">
+                  </div></td>
+                  <td><div align="center">
+                      <input name="height" type="text" class="formnum" id="height" size="4" onFocus="checkColor1(this)" onBlur="checkColor2(this)" tabindex="41">
+                  </div></td>
+                  <td><div align="center">
+                    <input name="items" type="text" class="formnum" id="items" value="1" size="4" onfocus="checkColor1(this)" onblur="checkColor2(this)" tabindex="42">
+                  </div></td>
+                  <td><div align="center">
+                    <input name="country_origin" type="text" class="ntext" id="country_origin" size="2" onfocus="checkColor1(this)" onblur="checkColor2(this)" tabindex="43">
+                    <input name="carton_reference" type="text" class="ntext" id="carton_reference" size="25" onfocus="checkColor1(this)" onblur="checkColor2(this)" tabindex="43">
+                  </div></td>
+                  <td><div align="center"><a href="javascript:document.form1.submit()"><img src="../../icons/plus-circle-7@2x.png" width="20" border="0" align="absmiddle"></a></div></td>
+                </tr>
+                
+              </table></td>
+            </tr>
+          </table>
+          <input name="total_records" type="hidden" id="total_records" value="0">
+          <br>
+          
+        
+        <table width="100%"  border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td bgcolor="#CCCCCC" class="ntextrow">Upload files</td>
+          </tr>
+          
+        </table>
+        
+        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="ntextrowred">
+          <tr>
+            <td>No records found</td>
+          </tr>
+        </table>
+
+        
+                </form> 
+		</td>
+    </tr>
+  </table>
+  
+</div>
+<div class="footer">
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td>Cargotrack &copy; 2016</td>
+    <td valign="top"><div align="right">August 21, 2016&nbsp;&nbsp;swiftpac&nbsp;<img src="../../icons16/bug_green.gif" width="16" height="16" align="absmiddle" />&nbsp;<a href="#"  onClick="GP_AdvOpenWindow('https://control.cargotrack.net/bug/default.asp?client_id=1&name=SwiftPac Support&email=support@switpac.com&time=22:53:51&url=/appl2.0/warehouse/add_warehouse.asp&id=141101','Bug','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,channelmode=no,directories=no',500,320,'center','ignoreLink','',0,'',0,1,5,'');return document.MM_returnValue">Report Bug</a></div></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <env:Body xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <v17:ProcessShipmentReply xmlns:v17="http://fedex.com/ws/ship/v17">
+         <v17:HighestSeverity>WARNING</v17:HighestSeverity>
+         <v17:Notifications>
+            <v17:Severity>WARNING</v17:Severity>
+            <v17:Source>ship</v17:Source>
+            <v17:Code>2469</v17:Code>
+            <v17:Message>shipTimestamp is invalid</v17:Message>
+            <v17:LocalizedMessage>shipTimestamp is invalid</v17:LocalizedMessage>
+         </v17:Notifications>
+         <v17:TransactionDetail xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+            <v17:CustomerTransactionId>IR1_01_MXMX_PO_DIA</v17:CustomerTransactionId>
+         </v17:TransactionDetail>
+         <v17:Version xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+            <v17:ServiceId>ship</v17:ServiceId>
+            <v17:Major>17</v17:Major>
+            <v17:Intermediate>0</v17:Intermediate>
+            <v17:Minor>0</v17:Minor>
+         </v17:Version>
+         <v17:JobId>208e62518062f3q110aj022673</v17:JobId>
+         <v17:CompletedShipmentDetail>
+            <v17:UsDomestic>false</v17:UsDomestic>
+            <v17:CarrierCode>FDXE</v17:CarrierCode>
+            <v17:ServiceTypeDescription>ECONOMY</v17:ServiceTypeDescription>
+            <v17:PackagingDescription>YOUR_PACKAGING</v17:PackagingDescription>
+            <v17:OperationalDetail>
+               <v17:UrsaPrefixCode>02</v17:UrsaPrefixCode>
+               <v17:UrsaSuffixCode>JAIA</v17:UrsaSuffixCode>
+               <v17:OriginLocationId>JAIA</v17:OriginLocationId>
+               <v17:OriginLocationNumber>0</v17:OriginLocationNumber>
+               <v17:OriginServiceArea>AA</v17:OriginServiceArea>
+               <v17:DestinationLocationId>JAIA</v17:DestinationLocationId>
+               <v17:DestinationLocationNumber>0</v17:DestinationLocationNumber>
+               <v17:DestinationServiceArea>AA</v17:DestinationServiceArea>
+               <v17:DestinationLocationStateOrProvinceCode>RJ</v17:DestinationLocationStateOrProvinceCode>
+               <v17:IneligibleForMoneyBackGuarantee>false</v17:IneligibleForMoneyBackGuarantee>
+               <v17:AstraPlannedServiceLevel>AA</v17:AstraPlannedServiceLevel>
+               <v17:AstraDescription>ECONOMY</v17:AstraDescription>
+               <v17:PostalCode>302011</v17:PostalCode>
+               <v17:StateOrProvinceCode></v17:StateOrProvinceCode>
+               <v17:CountryCode>IN</v17:CountryCode>
+               <v17:AirportId>DEL</v17:AirportId>
+               <v17:ServiceCode>20</v17:ServiceCode>
+               <v17:PackagingCode>01</v17:PackagingCode>
+            </v17:OperationalDetail>
+            <v17:ShipmentDocuments>
+               <v17:Type>AUXILIARY_LABEL</v17:Type>
+               <v17:ShippingDocumentDisposition>RETURNED</v17:ShippingDocumentDisposition>
+               <v17:AccessReference>Intra-Country-Secondary</v17:AccessReference>
+               <v17:ImageType>PNG</v17:ImageType>
+               <v17:Resolution>200</v17:Resolution>
+               <v17:CopiesToPrint>1</v17:CopiesToPrint>
+               <v17:Parts>
+                  <v17:DocumentPartSequenceNumber>1</v17:DocumentPartSequenceNumber>
+                  <v17:Image>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</v17:Image>
+               </v17:Parts>
+            </v17:ShipmentDocuments>
+            <v17:AssociatedShipments>
+               <v17:Type>COD_AND_DELIVERY_ON_INVOICE_ACCEPTANCE_RETURN</v17:Type>
+               <v17:Sender>
+                  <v17:Contact>
+                     <v17:PersonName>Input Your Information</v17:PersonName>
+                     <v17:CompanyName>Input Your Information</v17:CompanyName>
+                     <v17:PhoneNumber>1478523698</v17:PhoneNumber>
+                  </v17:Contact>
+                  <v17:Address>
+                     <v17:StreetLines>Input Your Information</v17:StreetLines>
+                     <v17:City>DELHI</v17:City>
+                     <v17:StateOrProvinceCode>RJ</v17:StateOrProvinceCode>
+                     <v17:PostalCode>302011</v17:PostalCode>
+                     <v17:CountryCode>IN</v17:CountryCode>
+                     <v17:Residential>false</v17:Residential>
+                  </v17:Address>
+               </v17:Sender>
+               <v17:Recipient>
+                  <v17:AccountNumber>Input Your Information</v17:AccountNumber>
+                  <v17:Contact>
+                     <v17:PersonName>Input Your Information</v17:PersonName>
+                     <v17:CompanyName>Input Your Information</v17:CompanyName>
+                     <v17:PhoneNumber>1234567899</v17:PhoneNumber>
+                  </v17:Contact>
+                  <v17:Address>
+                     <v17:StreetLines>Input Your Information</v17:StreetLines>
+                     <v17:City>JAIPUR</v17:City>
+                     <v17:StateOrProvinceCode>RJ</v17:StateOrProvinceCode>
+                     <v17:PostalCode>302011</v17:PostalCode>
+                     <v17:CountryCode>IN</v17:CountryCode>
+                     <v17:Residential>false</v17:Residential>
+                  </v17:Address>
+               </v17:Recipient>
+               <v17:ServiceType>PRIORITY_OVERNIGHT</v17:ServiceType>
+               <v17:PackagingType>FEDEX_ENVELOPE</v17:PackagingType>
+               <v17:TrackingId>
+                  <v17:TrackingIdType>FEDEX</v17:TrackingIdType>
+                  <v17:FormId>0325</v17:FormId>
+                  <v17:TrackingNumber>Input Your Information</v17:TrackingNumber>
+               </v17:TrackingId>
+               <v17:CustomerReferences>
+                  <v17:CustomerReferenceType>CUSTOMER_REFERENCE</v17:CustomerReferenceType>
+                  <v17:Value>RET - 794632541009</v17:Value>
+               </v17:CustomerReferences>
+               <v17:ShipmentOperationalDetail>
+                  <v17:OriginLocationNumber>0</v17:OriginLocationNumber>
+                  <v17:DestinationLocationId>JAIA</v17:DestinationLocationId>
+                  <v17:DestinationLocationNumber>0</v17:DestinationLocationNumber>
+                  <v17:DestinationServiceArea>AA</v17:DestinationServiceArea>
+                  <v17:DestinationLocationStateOrProvinceCode></v17:DestinationLocationStateOrProvinceCode>
+                  <v17:IneligibleForMoneyBackGuarantee>false</v17:IneligibleForMoneyBackGuarantee>
+                  <v17:AstraDescription>PRIORITY OVERNIGHT</v17:AstraDescription>
+                  <v17:AirportId>DEL</v17:AirportId>
+                  <v17:ServiceCode>01</v17:ServiceCode>
+                  <v17:PackagingCode>06</v17:PackagingCode>
+               </v17:ShipmentOperationalDetail>
+               <v17:PackageOperationalDetail>
+                  <v17:OperationalInstructions>
+                     <v17:Number>2</v17:Number>
+                     <v17:Content>TRK#</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>3</v17:Number>
+                     <v17:Content>0325</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>7</v17:Number>
+                     <v17:Content>1021467000441042404700794632541010</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>8</v17:Number>
+                     <v17:Content>537J1/879A/EE4B</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>10</v17:Number>
+                     <v17:Content>7946 3254 1010</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>13</v17:Number>
+                     <v17:Content>PRIORITY OVERNIGHT</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>14</v17:Number>
+                     <v17:Content>COD RETURN</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>15</v17:Number>
+                     <v17:Content>302011</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>16</v17:Number>
+                     <v17:Content>-IN</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>19</v17:Number>
+                     <v17:Content>COD AMOUNT 10.00 INR</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:OperationalInstructions>
+                     <v17:Number>20</v17:Number>
+                     <v17:Content>UNSECURED</v17:Content>
+                  </v17:OperationalInstructions>
+                  <v17:Barcodes>
+                     <v17:BinaryBarcodes>
+                        <v17:Type>COMMON_2D</v17:Type>
+                        <v17:Value>Wyk+HjAxHTAyMzAyMDExHTM1Nh0wMR03OTQ2MzI1NDEwMTAwMzI1HUZERR0xNTAwNjc2MDAdMDYxHR0xLzEdMC4wMEtHHU4dSW5wdXQgWW91ciBJbmZvcm1hdGlvbh1KQUlQVVIdICAdSW5wdXQgWW91ciBJbmZvcm1hdGlvbh4wNh0xMFpFSUkwNh0xMVpJbnB1dCBZb3VyIEluZm9ybWF0aW9uHTEyWjEyMzQ1Njc4OTkdMTVaMTE3NTcwNB0yMFoxMC4wMBwdMjVaVRwdMzFaMTAyMTQ2NzAwMDQ0MTA0MjQwNDcwMDc5NDYzMjU0MTAxMB0zMlowMh0zNFowNh05OVpFSTAwMDQcSU4cHElOUhxBQkNEHBxZHBwxNTAwNjc2MDAdHgQ=</v17:Value>
+                     </v17:BinaryBarcodes>
+                     <v17:StringBarcodes>
+                        <v17:Type>FEDEX_1D</v17:Type>
+                        <v17:Value>1021467000441042404700794632541010</v17:Value>
+                     </v17:StringBarcodes>
+                  </v17:Barcodes>
+               </v17:PackageOperationalDetail>
+               <v17:Label>
+                  <v17:Type>COD_AND_DELIVERY_ON_INVOICE_ACCEPTANCE_RETURN_LABEL</v17:Type>
+                  <v17:ShippingDocumentDisposition>RETURNED</v17:ShippingDocumentDisposition>
+                  <v17:ImageType>PNG</v17:ImageType>
+                  <v17:Resolution>200</v17:Resolution>
+                  <v17:CopiesToPrint>1</v17:CopiesToPrint>
+                  <v17:Parts>
+                     <v17:DocumentPartSequenceNumber>1</v17:DocumentPartSequenceNumber>

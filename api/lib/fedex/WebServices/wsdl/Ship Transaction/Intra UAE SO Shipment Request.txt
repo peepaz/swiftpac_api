@@ -1,0 +1,167 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<soapenv:Body>
+<m:ProcessShipmentRequest xmlns:m="http://fedex.com/ws/ship/v17">
+<m:WebAuthenticationDetail>
+<m:UserCredential>
+<m:Key>Input Your Information</m:Key>
+<m:Password>Input Your Information</m:Password>
+</m:UserCredential>
+</m:WebAuthenticationDetail>
+<m:ClientDetail>
+<m:AccountNumber>Input Your Information</m:AccountNumber>
+<m:MeterNumber>Input Your Information</m:MeterNumber>
+</m:ClientDetail>
+<m:TransactionDetail>
+<m:CustomerTransactionId>123790</m:CustomerTransactionId>
+</m:TransactionDetail>
+<m:Version>
+<m:ServiceId>ship</m:ServiceId>
+<m:Major>17</m:Major>
+<m:Intermediate>0</m:Intermediate>
+<m:Minor>0</m:Minor>
+</m:Version>
+<m:RequestedShipment>
+<m:ShipTimestamp>2014-05-27T05:00:00-05:00</m:ShipTimestamp>
+<m:DropoffType>REGULAR_PICKUP</m:DropoffType>
+<m:ServiceType>STANDARD_OVERNIGHT</m:ServiceType>
+<m:PackagingType>YOUR_PACKAGING</m:PackagingType>
+<m:Shipper>
+<m:Contact>
+<m:PersonName>Input Your Information</m:PersonName>
+<m:CompanyName>Input Your Information</m:CompanyName>
+<m:PhoneNumber>Input Your Information</m:PhoneNumber>
+</m:Contact>
+<m:Address>
+<m:StreetLines>Input Your Information</m:StreetLines>
+<m:City>DUBAI CITY</m:City>
+<m:StateOrProvinceCode>DU</m:StateOrProvinceCode>
+<m:PostalCode>20001</m:PostalCode>
+<m:CountryCode>AE</m:CountryCode>
+</m:Address>
+</m:Shipper>
+<m:Recipient>
+<m:Contact>
+<m:PersonName>Input Your Information</m:PersonName>
+<m:CompanyName>Input Your Information</m:CompanyName>
+<m:PhoneNumber>Input Your Information</m:PhoneNumber>
+</m:Contact>
+<m:Address>
+<m:StreetLines>Input Your Information</m:StreetLines>
+<m:City> SHARJAH CITY</m:City>
+<m:StateOrProvinceCode>SH</m:StateOrProvinceCode>
+<m:PostalCode>30001</m:PostalCode>
+<m:CountryCode>AE</m:CountryCode>
+</m:Address>
+</m:Recipient>
+<m:Origin>
+<m:Contact>
+<m:PersonName>Input Your Information</m:PersonName>
+<m:CompanyName>Input Your Information</m:CompanyName>
+<m:PhoneNumber>Input Your Information</m:PhoneNumber>
+</m:Contact>
+<m:Address>
+<m:StreetLines>Input Your Information</m:StreetLines>
+<m:City>DUBAI CITY</m:City>
+<m:StateOrProvinceCode>DU</m:StateOrProvinceCode>
+<m:PostalCode>20001</m:PostalCode>
+<m:CountryCode>AE</m:CountryCode>
+</m:Address>
+</m:Origin>
+<m:ShippingChargesPayment>
+<m:PaymentType>SENDER</m:PaymentType>
+<m:Payor>
+<m:ResponsibleParty>
+<m:AccountNumber>Input Your Information</m:AccountNumber>
+<m:Contact>
+<m:Title>fedex</m:Title>
+</m:Contact>
+<m:Address>
+<m:CountryCode>US</m:CountryCode>
+</m:Address>
+</m:ResponsibleParty>
+</m:Payor>
+</m:ShippingChargesPayment>
+<m:ExpressFreightDetail>
+<m:PackingListEnclosed>true</m:PackingListEnclosed>
+<m:ShippersLoadAndCount>12345</m:ShippersLoadAndCount>
+<m:BookingConfirmationNumber>1234567890</m:BookingConfirmationNumber>
+</m:ExpressFreightDetail>
+<m:CustomsClearanceDetail>
+<m:DutiesPayment>
+<m:PaymentType>SENDER</m:PaymentType>
+</m:DutiesPayment>
+<m:DocumentContent>NON_DOCUMENTS</m:DocumentContent>
+<m:CustomsValue>
+<m:Currency>DHS</m:Currency>
+<m:Amount>200.0</m:Amount>
+</m:CustomsValue>
+<m:Commodities>
+<m:Name></m:Name>
+<m:NumberOfPieces>1</m:NumberOfPieces>
+<m:Description>BOOKS</m:Description>
+<m:CountryOfManufacture>AE</m:CountryOfManufacture>
+<m:HarmonizedCode>1004000010</m:HarmonizedCode>
+<m:Weight>
+<m:Units>KG</m:Units>
+<m:Value>1.0</m:Value>
+</m:Weight>
+<m:Quantity>1</m:Quantity>
+<m:QuantityUnits>EA</m:QuantityUnits>
+<m:UnitPrice>
+<m:Currency>DHS</m:Currency>
+<m:Amount>200.000000</m:Amount>
+</m:UnitPrice>
+<m:CustomsValue>
+<m:Currency>DHS</m:Currency>
+<m:Amount>200</m:Amount>
+</m:CustomsValue>
+</m:Commodities>
+<m:ExportDetail>
+<m:B13AFilingOption>NOT_REQUIRED</m:B13AFilingOption>
+<m:ExportComplianceStatement>NO EEI 30.37(f)</m:ExportComplianceStatement>
+</m:ExportDetail>
+</m:CustomsClearanceDetail>
+<m:LabelSpecification>
+<m:LabelFormatType>COMMON2D</m:LabelFormatType>
+<m:ImageType>PNG</m:ImageType>
+<m:LabelStockType>PAPER_4X6</m:LabelStockType>
+</m:LabelSpecification>
+<m:PackageCount>1</m:PackageCount>
+<m:RequestedPackageLineItems>
+<m:SequenceNumber>1</m:SequenceNumber>
+<m:InsuredValue>
+<m:Currency>DHS</m:Currency>
+<m:Amount>200.00</m:Amount>
+</m:InsuredValue>
+<m:Weight>
+<m:Units>KG</m:Units>
+<m:Value>10.0</m:Value>
+</m:Weight>
+<m:Dimensions>
+<m:Length>20</m:Length>
+<m:Width>20</m:Width>
+<m:Height>20</m:Height>
+<m:Units>CM</m:Units>
+</m:Dimensions>
+<m:ItemDescription>Intra Country Shipments</m:ItemDescription>
+<m:ItemDescriptionForClearance>Intra Country Shipments</m:ItemDescriptionForClearance>
+<m:CustomerReferences>
+<m:CustomerReferenceType>DEPARTMENT_NUMBER</m:CustomerReferenceType>
+<m:Value>SQA</m:Value>
+</m:CustomerReferences>
+<m:CustomerReferences>
+<m:CustomerReferenceType>CUSTOMER_REFERENCE</m:CustomerReferenceType>
+<m:Value>107362NDE0000123790</m:Value>
+</m:CustomerReferences>
+<m:CustomerReferences>
+<m:CustomerReferenceType>INTRACOUNTRY_REGULATORY_REFERENCE</m:CustomerReferenceType>
+<m:Value>107362NDE0000123790</m:Value>
+</m:CustomerReferences>
+<m:ContentRecords>
+<m:Description>BOOKS</m:Description>
+</m:ContentRecords>
+</m:RequestedPackageLineItems>
+</m:RequestedShipment>
+</m:ProcessShipmentRequest>
+</soapenv:Body>
+</soapenv:Envelope>

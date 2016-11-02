@@ -1,0 +1,27 @@
+[13-Feb-2016 13:14:03 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2
+[25-Mar-2016 07:40:26 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2
+[23-Jul-2016 02:37:34 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2
+[26-Jul-2016 02:04:17 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2
+[02-Aug-2016 10:09:09 CST6CDT] PHP Parse error:  syntax error, unexpected '$payment_info' (T_VARIABLE) in /home/vincyavi/public_html/swiftpac_api/api/test/test_cargotrack_create_invoice.php on line 47
+[03-Aug-2016 13:08:34 CST6CDT] PHP Fatal error:  Call to undefined function createWarehouse() in /home/vincyavi/public_html/swiftpac_api/api/test/test_cargotrack_create_invoice.php on line 123
+[03-Aug-2016 13:39:40 CST6CDT] PHP Fatal error:  Call to undefined function ncurl_getinfo() in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 40
+[03-Aug-2016 13:59:29 CST6CDT] PHP Fatal error:  Call to undefined function curl_get() in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 40
+[03-Aug-2016 14:55:48 CST6CDT] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 113
+[03-Aug-2016 14:58:32 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack.php on line 45
+[04-Aug-2016 07:07:02 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack2.php on line 46
+[04-Aug-2016 14:12:31 CST6CDT] PHP Catchable fatal error:  Object of class DOMNodeList could not be converted to string in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 155
+[04-Aug-2016 14:50:48 CST6CDT] PHP Catchable fatal error:  Object of class DOMElement could not be converted to string in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 157
+[04-Aug-2016 14:56:55 CST6CDT] PHP Fatal error:  Call to a member function children() on null in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 164
+[04-Aug-2016 15:01:23 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 182
+[04-Aug-2016 15:18:26 CST6CDT] PHP Catchable fatal error:  Argument 13 passed to createInvoice() must be of the type array, null given, called in /home/vincyavi/public_html/swiftpac_api/api/test/test_cargotrack_create_invoice.php on line 236 and defined in /home/vincyavi/public_html/swiftpac_api/api/test/test_cargotrack_create_invoice.php on line 5
+[05-Aug-2016 00:43:57 CST6CDT] PHP Fatal error:  Call to a member function children() on null in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 164
+[05-Aug-2016 00:55:21 CST6CDT] PHP Fatal error:  Call to a member function children() on array in /home/vincyavi/public_html/swiftpac_api/api/test/cargotrack_update_invoice.php on line 172
+[05-Aug-2016 14:38:04 CST6CDT] PHP Fatal error:  Cannot use [] for reading in /home/vincyavi/public_html/swiftpac_api/api/test/test_cargotrack_pay_invoice.php on line 48
+[09-Aug-2016 04:27:14 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack.php on line 45
+[09-Aug-2016 10:02:34 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack2.php on line 46
+[10-Aug-2016 13:35:50 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack.php on line 45
+[10-Aug-2016 14:13:28 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack2.php on line 46
+[18-Aug-2016 15:00:27 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack.php on line 45
+[19-Aug-2016 03:07:03 CST6CDT] PHP Fatal error:  Call to undefined function str_get_html() in /home/vincyavi/public_html/swiftpac_api/api/test/testCargoTrack2.php on line 46
+[19-Aug-2016 09:27:00 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2
+[06-Oct-2016 11:41:12 CST6CDT] PHP Fatal error:  require_once(): Failed opening required 'DataTypes.php' (include_path='.:/usr/local/php56/pear') in /home/vincyavi/public_html/swiftpac_api/api/test/SwiftPacShippingApi.php on line 2

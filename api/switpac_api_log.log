@@ -1,0 +1,106 @@
+array(1) {
+  ["email"]=>
+  object(stdClass)#8 (7) {
+    ["name"]=>
+    string(4) "eeee"
+    ["addressLine1"]=>
+    string(4) "fafa"
+    ["state"]=>
+    string(0) ""
+    ["zip"]=>
+    string(0) ""
+    ["city"]=>
+    string(4) "fafa"
+    ["countryCode"]=>
+    string(2) "US"
+    ["email"]=>
+    string(13) "afafa@msn.com"
+  }
+}
+array(1) {
+  ["ChargeResult"]=>
+  int(1300)
+}
+array(1) {
+  ["resp"]=>
+  object(lib\SwiftPac\DataTypes\SwiftPacCreditCardPaymentResponse)#16 (1) {
+    ["creditCardPaymentResponse"]=>
+    object(lib\SwiftPac\DataTypes\CreditCardPaymentResponse)#22 (2) {
+      ["creditCardPaymentResult"]=>
+      object(lib\SwiftPac\DataTypes\CreditCardPaymentResult)#23 (7) {
+        ["name"]=>
+        string(4) "eeee"
+        ["captured"]=>
+        bool(true)
+        ["amount"]=>
+        int(13)
+        ["paid"]=>
+        bool(true)
+        ["status"]=>
+        string(4) "paid"
+        ["last4"]=>
+        string(4) "4242"
+        ["currency"]=>
+        string(3) "usd"
+      }
+      ["errors"]=>
+      NULL
+    }
+  }
+}
+array(1) {
+  ["'branch"]=>
+  string(9) "MCO_22759"
+}
+array(1) {
+  ["'branch"]=>
+  string(8) "USA_5687"
+}
+array(1) {
+  ["email"]=>
+  object(stdClass)#8 (6) {
+    ["name"]=>
+    string(9) "Test Test"
+    ["addressLine1"]=>
+    string(4) "Test"
+    ["state"]=>
+    string(4) "test"
+    ["city"]=>
+    string(4) "test"
+    ["countryCode"]=>
+    string(3) "svd"
+    ["email"]=>
+    string(23) "apitest218@swiftpac.com"
+  }
+}
+array(1) {
+  ["ChargeResult"]=>
+  int(1500)
+}
+array(1) {
+  ["resp"]=>
+  object(lib\SwiftPac\DataTypes\SwiftPacCreditCardPaymentResponse)#16 (1) {
+    ["creditCardPaymentResponse"]=>
+    object(lib\SwiftPac\DataTypes\CreditCardPaymentResponse)#22 (2) {
+      ["creditCardPaymentResult"]=>
+      object(lib\SwiftPac\DataTypes\CreditCardPaymentResult)#23 (7) {
+        ["name"]=>
+        string(9) "Test Test"
+        ["captured"]=>
+        bool(true)
+        ["amount"]=>
+        int(15)
+        ["paid"]=>
+        bool(true)
+        ["status"]=>
+        string(4) "paid"
+        ["last4"]=>
+        string(4) "4242"
+        ["currency"]=>
+        string(3) "usd"
+      }
+      ["errors"]=>
+      NULL
+    }
+  }
+}

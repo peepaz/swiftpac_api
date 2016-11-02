@@ -1,0 +1,4 @@
+[01-Aug-2016 03:35:02 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/vincyavi/public_html/swiftpac_api/api/lib/swiftpac/functions.php on line 11
+[01-Aug-2016 14:23:34 CST6CDT] PHP Fatal error:  Cannot redeclare lib\SwiftPac\SwiftPacLabel::$shipperAccNumLableText in /home/vincyavi/public_html/swiftpac_api/api/lib/swiftpac/swiftpaclabel.php on line 22
+[03-Aug-2016 02:22:07 CST6CDT] PHP Fatal error:  Cannot redeclare lib\SwiftPac\SwiftPacLabel::$shipperAccNumLableText in /home/vincyavi/public_html/swiftpac_api/api/lib/swiftpac/swiftpaclabel.php on line 22
+[04-Aug-2016 21:01:49 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/vincyavi/public_html/swiftpac_api/api/lib/swiftpac/functions.php on line 11

@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns ="http://fedex.com/ws/async/v3">
+   <soapenv:Header></soapenv:Header>
+   <soapenv:Body>
+      <RetrieveJobResultsRequest>
+      <WebAuthenticationDetail>
+            <ParentCredential>
+               <Key>Input Your Information</Key>
+               <Password>Input Your Information</Password>
+            </ParentCredential>
+            <UserCredential>
+               <Key>Input Your Information</Key>
+               <Password>Input Your Information</Password>
+            </UserCredential>
+         </WebAuthenticationDetail>
+         <ClientDetail>
+            <AccountNumber>Input Your Information</AccountNumber>
+            <MeterNumber>Input Your Information</MeterNumber>
+            <IntegratorId>12345</IntegratorId>
+            <Region>CA</Region>
+            <Localization>
+               <LanguageCode>EN</LanguageCode>
+               <LocaleCode>en</LocaleCode>
+            </Localization>
+         </ClientDetail>
+         <TransactionDetail>
+            <CustomerTransactionId>Retrieve_JobResults_Request</CustomerTransactionId>
+         </TransactionDetail>
+         <Version>
+            <ServiceId>async</ServiceId>
+            <Major>3</Major>
+            <Intermediate>0</Intermediate>
+            <Minor>0</Minor>
+         </Version>
+         <JobId>Input Your Information</JobId>
+      </RetrieveJobResultsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

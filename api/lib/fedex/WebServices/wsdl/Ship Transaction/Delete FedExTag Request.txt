@@ -1,0 +1,52 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v17="http://fedex.com/ws/ship/v17">
+   <soapenv:Header></soapenv:Header>
+   <soapenv:Body>
+      <v17:DeleteTagRequest>
+         <v17:WebAuthenticationDetail>
+                  <v17:UserCredential>
+               <v17:Key>Input Your Information</v17:Key>
+               <v17:Password>Input Your Information</v17:Password>
+            </v17:UserCredential>
+         </v17:WebAuthenticationDetail>
+         <v17:ClientDetail>
+            <v17:AccountNumber>Input Your Information</v17:AccountNumber>
+            <v17:MeterNumber>Input Your Information</v17:MeterNumber>
+            <v17:Localization>
+               <v17:LanguageCode>EN</v17:LanguageCode>
+               <v17:LocaleCode>ES</v17:LocaleCode>
+            </v17:Localization>
+         </v17:ClientDetail>
+         <v17:TransactionDetail>
+            <v17:CustomerTransactionId>DeleteTagRequest_v17</v17:CustomerTransactionId>
+            <v17:Localization>
+               <v17:LanguageCode>EN</v17:LanguageCode>
+               <v17:LocaleCode>ES</v17:LocaleCode>
+            </v17:Localization>
+         </v17:TransactionDetail>
+         <v17:Version>
+            <v17:ServiceId>ship</v17:ServiceId>
+            <v17:Major>17</v17:Major>
+            <v17:Intermediate>0</v17:Intermediate>
+            <v17:Minor>0</v17:Minor>
+         </v17:Version>
+         <v17:DispatchLocationId>NQAA</v17:DispatchLocationId>
+         <v17:DispatchDate>2014-05-26</v17:DispatchDate>
+         <v17:Payment>
+            <v17:PaymentType>SENDER</v17:PaymentType>
+            <v17:Payor>
+               <v17:ResponsibleParty>
+                  <v17:AccountNumber>Input Your Information</v17:AccountNumber>
+                  <v17:Tins>
+                     <v17:TinType>BUSINESS_NATIONAL</v17:TinType>
+                     <v17:Number>123456</v17:Number>
+                  </v17:Tins>
+                  <v17:Contact>
+                     <v17:ContactId>123</v17:ContactId>
+                  </v17:Contact>
+               </v17:ResponsibleParty>
+            </v17:Payor>
+         </v17:Payment>
+         <v17:ConfirmationNumber>Input Your Information</v17:ConfirmationNumber>
+      </v17:DeleteTagRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

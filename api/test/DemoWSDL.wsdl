@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DemoWSDL"
+	targetNamespace="http://www.example.org/DemoWSDL/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://www.example.org/DemoWSDL/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.example.org/DemoWSDL/">
+			<xsd:element name="DemoRate" type="tns:DemoRate">
+			</xsd:element>
+			<xsd:element name="DemoRateResponse" type="tns:DemoRateResponse">
+			</xsd:element>
+			<xsd:complexType name="DemoRate">
+				<xsd:sequence>
+					<xsd:element name="carrier" type="xsd:string"
+						maxOccurs="1" minOccurs="1" nillable="false">
+					</xsd:element>
+					<xsd:element name="login" type="tns:Authenticate" maxOccurs="1"
+						minOccurs="1">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="DemoRateResponse">
+				<xsd:sequence>
+					<xsd:element name="rate0" type="xsd:string" maxOccurs="1"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element name="rate1" type="xsd:string" maxOccurs="1"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element name="rate2" type="xsd:string" maxOccurs="1"
+						minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="Authenticate" type="tns:Authenticate">
+			</xsd:element>
+			<xsd:element name="AuthenticateResponse" type="tns:AuthenticateResponse">
+			</xsd:element>
+			<xsd:complexType name="Authenticate">
+				<xsd:sequence>
+					<xsd:element name="username" type="xsd:string"
+						minOccurs="1" maxOccurs="1" nillable="false">
+					</xsd:element>
+					<xsd:element name="password" type="xsd:string"
+						maxOccurs="1" minOccurs="1" nillable="false">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="AuthenticateResponse">
+				<xsd:sequence>
+					<xsd:element name="authenticate" type="xsd:boolean"
+						maxOccurs="1" minOccurs="1" nillable="false">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="DemoRateRequest">
+		<wsdl:part name="parameters" element="tns:DemoRate"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="DemoRateResponse">
+		<wsdl:part name="parameters" element="tns:DemoRateResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AuthenticateRequest">
+		<wsdl:part name="parameters" element="tns:Authenticate"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AuthenticateResponse">
+		<wsdl:part name="parameters" element="tns:AuthenticateResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="DemoWSDLPortType">
+		<wsdl:operation name="DemoRate">
+			<wsdl:input message="tns:DemoRateRequest"></wsdl:input>
+			<wsdl:output message="tns:DemoRateResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Authenticate">
+			<wsdl:input message="tns:AuthenticateRequest"></wsdl:input>
+			<wsdl:output message="tns:AuthenticateResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DemoWSDLPortBinding" type="tns:DemoWSDLPortType">
+
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="DemoRate">
+
+			<soap:operation soapAction="http://www.example.org/DemoWSDL/DemoRate" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Authenticate">
+
+			<soap:operation soapAction="http://www.example.org/DemoWSDL/Authenticate" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DemoWSDL">
+		<wsdl:port name="DemoWSDLPort" binding="tns:DemoWSDLPortBinding">
+			<soap:address location="http://testapi.vincyaviation.com/api/swiftpacapi.php" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

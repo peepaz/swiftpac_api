@@ -1,0 +1,383 @@
+<!DOCTYPE html><html
+dir="ltr" lang="en-US"><head><meta
+charset="UTF-8" /><meta
+name="viewport" content="width=device-width, initial-scale=1" /> <script>var cb = function() {
+					var l = document.createElement('link'); l.rel = 'stylesheet';
+					l.href = '//s0.cyberciti.org/assets/rwd/c/mfeb92016css.css';
+					var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+				};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+			webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);</script><noscript><link
+rel='stylesheet' href='//s0.cyberciti.org/assets/rwd/c/mfeb92016css.css'/></noscript><title>Configure Ubuntu Linux GRUB to load FreeBSD</title><link
+rel="canonical" href="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft feed" href="http://www.cyberciti.biz/tips/feed" /><link
+rel="pingback" href="http://www.cyberciti.biz/tips/xmlrpc.php" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft &raquo; Configure Ubuntu Linux GRUB to load FreeBSD Comments Feed" href="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html/feed" /><link
+rel='stylesheet' id='ext-widget-opts-css'  href='http://www.cyberciti.biz/tips/wp-content/plugins/widget-options/assets/css/extended-widget-options.css' type='text/css' media='all' /><link
+rel='stylesheet' id='wp-syntax-css-css'  href='http://www.cyberciti.biz/tips/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' /> <script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script> <script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script> <link
+rel='https://api.w.org/' href='http://www.cyberciti.biz/tips/wp-json/' /><link
+rel="alternate" type="application/json+oembed" href="http://www.cyberciti.biz/tips/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.cyberciti.biz%2Ftips%2Fconfigure-ubuntu-grub-to-load-freebsd.html" /><meta
+name="description" content="Describes how to boot dual boot FreeBSD and Linux operating system using GNU boot loader called Grub (GRand Unified Bootloader) " /><meta
+name="keywords" content="grub boot loader, freebsd linux grub, partition size, root partition, root device, boot image, hard disk, kernel, configuration file, /boot/loader,/boot/grub/menu.lst, boot freebsd under Linux" /><link
+rel="shortcut icon" href="http://www.cyberciti.biz/tips/wp-content/themes/thesis/lib/images/favicon.ico" /></head><body
+class="template-single"> <script type="text/javascript">(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();</script> <div
+class="container"> <span
+class="menu_control">≡ Menu</span><ul
+id="menu-menu-1" class="menu"><li
+id="menu-item-113451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113451"><a
+href="/">Home</a></li><li
+id="menu-item-113502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113502"><a
+href="/faq/">Howtos and Tutorials</a></li><li
+id="menu-item-113500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113500"><a
+href="https://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting TutoriaL</a></li><li
+id="menu-item-113503" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113503"><a
+href="/tips/about-us">About</a></li><li
+id="menu-item-113501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113501"><a
+href="/nixcraft-rss-feed-syndication/">RSS/Feed</a></li></ul><div
+id="header" class="header"><div
+id="site_title"><a
+href="http://www.cyberciti.biz/tips">nixCraft</a></div><div
+id="site_tagline">Linux Tips, Hacks, Tutorials, And Ideas In Blog Format</div></div><div
+class="columns"><div
+class="content"><div
+id="post-878" class="post_box grt top" itemscope itemtype="http://schema.org/Article"><meta
+itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" /><div
+class="headline_area"><h1 class="headline" itemprop="headline">Configure Ubuntu Linux GRUB to load FreeBSD</h1><div
+class="byline small"> <span
+class="post_author_intro">by</span> <span
+class="post_author">Vivek Gite</span> <span
+class="post_date_intro">on</span> <span
+class="post_date" title="2006-03-17">March 17, 2006<span
+style='font-style: italic; text-transform: lowercase;'> last updated </span>April 26, 2008</span><div
+class="post_cats"> <span
+class="post_cats_intro">in</span> <a
+href="http://www.cyberciti.biz/tips/category/freebsd" rel="category tag">FreeBSD</a>, <a
+href="http://www.cyberciti.biz/tips/category/linux-desktop" rel="category tag">Linux desktop</a>, <a
+href="http://www.cyberciti.biz/tips/category/ubuntu-linux" rel="category tag">Ubuntu Linux</a></div></div></div><div
+class="post_content"><div
+style='float:right;margin-top:0px;margin-left:5px;'><a
+href='http://www.cyberciti.biz/tips/category/ubuntu-linux' title='See all Ubuntu Linux related FAQ'><img
+src='http://figs.cyberciti.biz/3rdparty/ubuntu-logo.jpg' border='0' /></a></div><p>Recently my friend emailed me an interesting scenario. He installed FreeBSD 6.0 / 7.0 in the first primary partition (10G). One day he installed Ubuntu Linux. He can boot into Linux but not able to boot into FreeBSD. Now, my friend wanted to boot both FreeBSD and Ubuntu Linux via Grub boot loader.<p><center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:336px;height:280px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="2404767461"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p></center></p><div
+style='float:right;margin-top:0px;margin-left:5px;'><a
+href='http://www.cyberciti.biz/tips/category/freebsd' title='See all FreeBSD related tips/articles'><img
+src='http://figs.cyberciti.biz/3rdparty/freebsd_logo_sm.png' border='0' /></a></div><p>It is not that hard to configure grub to boot FreeBSD. You just need to add following three lines to grub configuration file (/boot/grub/menu.lst). Boot into Ubuntu Linux and use text editor to edit the file /boot/grub/menu.lst ( Red hat and friends [ Fedora / CentOS ] try /etc/grub.conf file) :<br
+/> <code>$ gksudo gedit /boot/grub/menu.lst</code><br
+/> OR<br
+/> <code>$ gksudo vi /boot/grub/menu.lst</code><br
+/> Append FreeBSD  boot Configuration:</p><pre>title  FreeBSD 7.0
+root   (hd0,a)
+kernel /boot/loader</pre><p>Save and close the file. To see changes or to boot into FreeBSD reboot Ubuntu Linux box.<br
+/> Where,</p><ul><li><strong>title  FreeBSD 7.0 </strong>: Start a new boot entry. User always sees this title and hit enter key to boot os.</li><li><strong>root   (hd0,a)</strong> : Actual part is to select the correct root partition. The root option set the current root device to the device, then attempt to mount it to get the partition size. In above example &#8211; hd0 is  your first hard disk i.e. hda in Linux. In grub hda is hd0. Likewise your first, second partition on the first hard disk – hda1, hda2, becomes hd0,0 hd0,1 in Grub. In short, you are asking to use first hard first partition (remember FreeBSD use a,b,c names to represent partition names). If you have installed FreeBSD on third partition then you need to use following root statement:<br
+/> <strong>root   (hd0,2,a)</strong></li><li><strong>kernel /boot/loader</strong> : Use to load the primary boot image. FreeBSD use /boot/loader to load rest of kernel and os.</li></ul> <strong>Share this on:</strong><br/><div
+class="nixcraft-social"><a
+class="nixcraft-link nixcraft-twitter" href="https://twitter.com/intent/tweet?text=Configure+Ubuntu+Linux+GRUB+to+load+FreeBSD&url=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html&via=nixcraft" title="Tweet this tutorial/page">Twitter</a><a
+class="nixcraft-link nixcraft-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" title="Share this page/tutorial on Fa
+cebook">Facebook</a><a
+class="nixcraft-link nixcraft-googleplus" href="https://plus.google.com/share?url=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html" title="Share this page/tutorial on Google+">Google+<a/a><a
+class="nixcraft-link nixcraft-pdf" href="http://www.cyberciti.biz/view/pdf/tips/878.php" title="Download this blog post as a free pdf">Download PDF version </a><a
+class="nixcraft-link nixcraft-error" href="https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html&Field211=Configure Ubuntu Linux GRUB to load FreeBSD" target="_blank" title="Click here to report Typo/Grammar and other Incorrect information">Found an error/typo on this page?</a></div><div
+class="crp_related "><div
+class="my_tutorial_series">About the author: Vivek Gite is a seasoned sysadmin and a trainer for the Linux/Unix &amp; shell scripting. Follow him on <strong><a
+href="https://twitter.com/nixcraft" style="text-decoration: underline">Twitter</a></strong>. OR <strong>read more like this</strong>:<ul><li><a
+href="http://www.cyberciti.biz/tips/restore-debian-linux-grub-boot-loader.html"     class="crp_title">Restore Debian Linux Grub boot loader</a></li><li><a
+href="http://www.cyberciti.biz/tips/super-grub-disk-fix-windows-linux-boot.html"     class="crp_title">Download of the day: Super Grub Disk to fix Windows and Linux boot problems</a></li><li><a
+href="http://www.cyberciti.biz/tips/force-grub-to-reboots-into-the-specified-os.html"     class="crp_title">Force Grub to Reboots into the specified OS</a></li><li><a
+href="http://www.cyberciti.biz/tips/howto-recovering-grub-boot-loader-password.html"     class="crp_title">HowTo: Recovering Linux Grub Boot Loader Password</a></li><li><a
+href="http://www.cyberciti.biz/tips/howto-linux-boot-2tb-larger-raidarray-harddisk.html"     class="crp_title">Linux: Boot a 2TB+ partition or Larger Array Using Grub</a></li><li><a
+href="http://www.cyberciti.biz/tips/how-do-i-secure-grub-boot-loader.html"     class="crp_title">How Do I Secure Grub Boot Loader?</a></li><li><a
+href="http://www.cyberciti.biz/tips/howto-fix-dual-boot-windows-vista-linux.html"     class="crp_title">Fix a dual boot Windows Vista and Linux problem</a></li><li><a
+href="http://www.cyberciti.biz/tips/reset-forgotten-openbsd-root-password.html"     class="crp_title">How to: OpenBSD reset root password</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-limiting-or-restricting-smp-cpu-activation-in-smp-mode.html"     class="crp_title">Linux Limiting or restricting SMP CPU activation in SMP mode</a></li><li><a
+href="http://www.cyberciti.biz/tips/freebsd-which-directories-paths-used-to-load-device-drivers-modules.html"     class="crp_title">FreeBSD &gt; which directories (PATHs) used to load device drivers&hellip;</a></li></ul></div><div
+class="crp_clear"></div></div></div></div><div
+id="comments"><div
+class="comments_intro"><span
+class="bracket">{</span> <span
+class="num_comments">14</span> comments&#8230; <a
+href="#commentform" rel="nofollow">add one</a> <span
+class="bracket">}</span></div><ul
+class="comment_list"><li
+class="comment even thread-even depth-1" id="comment-19507"><div
+class="comment_head"> <span
+class="comment_author">seaman</span> <span
+class="comment_date">March 17, 2006, 11:28 pm</span></div><div
+class="comment_text grt" id="comment-body-19507"><p>If it does not want to boot you can put  something like this:</p><p>title FreeBSD<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>it realy works</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=19507#commentform' onclick='return addComment.moveForm( "comment-body-19507", "19507", "commentform", "878" )' aria-label='Reply to seaman'>Reply</a> <a
+class="comment_permalink" href="#comment-19507" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-19508"><div
+class="comment_head"> <span
+class="comment_author">DJ Tux</span> <span
+class="comment_date">March 18, 2006, 1:44 am</span></div><div
+class="comment_text grt" id="comment-body-19508"><p>GRUB loads the kernel directly and FreeBSD&#8217;s bootstrap interface sometimes changes heavily so GRUB can&#8217;t guarantee to pass kernel parameters correctly. Thus loading it via very flexible loader i.e. /boot/loader is highly recommend.</p><p>@seaman,<br
+/> Your method is good when unsupported operating systems needs booting via GRUB. But for FreeBSD /boot/loader is highly recommend.</p><p>Cheers,</p><p>DJ Tux</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=19508#commentform' onclick='return addComment.moveForm( "comment-body-19508", "19508", "commentform", "878" )' aria-label='Reply to DJ Tux'>Reply</a> <a
+class="comment_permalink" href="#comment-19508" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-50209"><div
+class="comment_head"> <span
+class="comment_author">johan</span> <span
+class="comment_date">January 3, 2007, 1:24 pm</span></div><div
+class="comment_text grt" id="comment-body-50209"><p>Hey,<br
+/> I dont really understand, I got ubuntu and windowsxp,, now when I start my computer I want to be able co choose one of these, what shoud I put to choose windows xp?<br
+/> have to ask so I dont do anything wrong,<br
+/> Thank you,<br
+/> Johan</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=50209#commentform' onclick='return addComment.moveForm( "comment-body-50209", "50209", "commentform", "878" )' aria-label='Reply to johan'>Reply</a> <a
+class="comment_permalink" href="#comment-50209" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment byuser comment-author-administrator bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-50211"><div
+class="comment_head"> <span
+class="comment_author"><a
+href='http://www.cyberciti.biz/tips/about-us' rel='external nofollow' class='url'>nixCraft</a></span> <span
+class="comment_date">January 3, 2007, 1:26 pm</span></div><div
+class="comment_text grt" id="comment-body-50211"><p>johan,</p><p>Do you see Windows XP as boot option? If so just select and enter. If you don&#8217;t see an option you need to edit grub.conf</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=50211#commentform' onclick='return addComment.moveForm( "comment-body-50211", "50211", "commentform", "878" )' aria-label='Reply to nixCraft'>Reply</a> <a
+class="comment_permalink" href="#comment-50211" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-140860"><div
+class="comment_head"> <span
+class="comment_author">Matrixium</span> <span
+class="comment_date">August 20, 2007, 6:33 pm</span></div><div
+class="comment_text grt" id="comment-body-140860"><p>Hi,<br
+/> I just install ubuntu on top of window xp. I can boot into ubuntu, but I can not boot into window xp.<br
+/> when I start my computer I was able to choose window xp as one of the choices to boot. But then the windows xp went to a autocheck,and autochecks fails. then the system restarts itself.<br
+/> can you help to solve the problem?</p><p>Thank you</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=140860#commentform' onclick='return addComment.moveForm( "comment-body-140860", "140860", "commentform", "878" )' aria-label='Reply to Matrixium'>Reply</a> <a
+class="comment_permalink" href="#comment-140860" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-141451"><div
+class="comment_head"> <span
+class="comment_author">Marco van de Voort</span> <span
+class="comment_date">October 21, 2007, 2:04 pm</span></div><div
+class="comment_text grt" id="comment-body-141451"><p>Note that partition (label) &#8220;c&#8221; is special and designates the whole disc.</p><p>P.s. it is kind of confronting having to type &#8220;linux&#8221; as antispam word on a FreeBSD topic :-)</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=141451#commentform' onclick='return addComment.moveForm( "comment-body-141451", "141451", "commentform", "878" )' aria-label='Reply to Marco van de Voort'>Reply</a> <a
+class="comment_permalink" href="#comment-141451" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-143350"><div
+class="comment_head"> <span
+class="comment_author">cfchris6</span> <span
+class="comment_date">April 1, 2008, 8:46 pm</span></div><div
+class="comment_text grt" id="comment-body-143350"><p>/boot/loader did not work for me, I think that is mainly because GRUB is not able to handle the disklabels of BSD correctly because /boot/loader may be in ad0s1a but GRUB looks just in ad0s1, so GRUB does not find anything.</p><p>root(hd?,?)<br
+/> makeactive<br
+/> chainloader +1</p><p>works perfectly and gives all the possibilitiys as a bootloader directly installed on MBR.</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=143350#commentform' onclick='return addComment.moveForm( "comment-body-143350", "143350", "commentform", "878" )' aria-label='Reply to cfchris6'>Reply</a> <a
+class="comment_permalink" href="#comment-143350" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-143589"><div
+class="comment_head"> <span
+class="comment_author">John Marino</span> <span
+class="comment_date">April 26, 2008, 12:18 am</span></div><div
+class="comment_text grt" id="comment-body-143589"><p>Thanks for this article.</p><p>I was not amused tonight.  I have FreeBSD on my primary partition of my primary disk.  A few months ago I left 24GB free reserved for a Linux testbed and installed Ubuntu 8.04 tonight.  Much to my anger, it wiped out my existing bootloader and I couldn&#8217;t get back to my primary OS.</p><p>This article pointed me in the right direction &#8212; true I am now using grub instead of the freeBSD bootloader but at least I can get to FreeBSD now.</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=143589#commentform' onclick='return addComment.moveForm( "comment-body-143589", "143589", "commentform", "878" )' aria-label='Reply to John Marino'>Reply</a> <a
+class="comment_permalink" href="#comment-143589" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-144311"><div
+class="comment_head"> <span
+class="comment_author"><a
+href='http://www.talishte.com' rel='external nofollow' class='url'>talishte</a></span> <span
+class="comment_date">July 8, 2008, 5:01 pm</span></div><div
+class="comment_text grt" id="comment-body-144311"><p>Thanks U</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144311#commentform' onclick='return addComment.moveForm( "comment-body-144311", "144311", "commentform", "878" )' aria-label='Reply to talishte'>Reply</a> <a
+class="comment_permalink" href="#comment-144311" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-144885"><div
+class="comment_head"> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_date">September 9, 2008, 10:56 am</span></div><div
+class="comment_text grt" id="comment-body-144885"><p>To enable FreeBSD 7 in Ubuntu Gibbon,<br
+/> Appending this following lines helped me.</p><p>title  FreeBSD 7<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>Thanks</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144885#commentform' onclick='return addComment.moveForm( "comment-body-144885", "144885", "commentform", "878" )' aria-label='Reply to Ramanathan'>Reply</a> <a
+class="comment_permalink" href="#comment-144885" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-144886"><div
+class="comment_head"> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_date">September 9, 2008, 10:58 am</span></div><div
+class="comment_text grt" id="comment-body-144886"><p>****************************************************<br
+/> To enable FreeBSD 7 in Ubuntu Gibbon,<br
+/> Appending this following lines in /boot/grub/menu.lst helped me.</p><p>title FreeBSD 7<br
+/> rootnoverify (hd0,0)<br
+/> makeactive<br
+/> chainloader +1</p><p>Thanks</p><p>*************************************************</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144886#commentform' onclick='return addComment.moveForm( "comment-body-144886", "144886", "commentform", "878" )' aria-label='Reply to Ramanathan'>Reply</a> <a
+class="comment_permalink" href="#comment-144886" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-144887"><div
+class="comment_head"> <span
+class="comment_author">Ramanathan</span> <span
+class="comment_date">September 9, 2008, 11:20 am</span></div><div
+class="comment_text grt" id="comment-body-144887"><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br
+/> ****************************************************<br
+/> Partition Detail<br
+/> &#8212;&#8212;&#8212;&#8212;&#8212;-<br
+/> FreeBSD is installed in the First partition of the primary IDE hard disc. Ubuntu is in second partition.</p><p>I tried the first option given in this website.<br
+/> It too worked.</p><p>The following lines are appended.</p><p>title   FreeBSD 7<br
+/> root    (hd0,0,a)<br
+/> kernel  /boot/loader</p><p>Thanks Again. :)</p><p>*************************************************</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=144887#commentform' onclick='return addComment.moveForm( "comment-body-144887", "144887", "commentform", "878" )' aria-label='Reply to Ramanathan'>Reply</a> <a
+class="comment_permalink" href="#comment-144887" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment even thread-even depth-1" id="comment-154562"><div
+class="comment_head"> <span
+class="comment_author">Dheeraj Suthar</span> <span
+class="comment_date">March 27, 2010, 4:18 pm</span></div><div
+class="comment_text grt" id="comment-body-154562"><p>Thanks a lot !!<br
+/> It saved my day.<br
+/> However I also used this article to restore my filesystem:<br
+/> <a
+href="http://neosmart.net/forums/showthread.php?t=1823" rel="nofollow">http://neosmart.net/forums/showthread.php?t=1823</a></p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=154562#commentform' onclick='return addComment.moveForm( "comment-body-154562", "154562", "commentform", "878" )' aria-label='Reply to Dheeraj Suthar'>Reply</a> <a
+class="comment_permalink" href="#comment-154562" title="permalink to this comment" rel="nofollow">Link</a></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="comment-161559"><div
+class="comment_head"> <span
+class="comment_author">oriantho</span> <span
+class="comment_date">November 28, 2010, 11:56 pm</span></div><div
+class="comment_text grt" id="comment-body-161559"><p>salut !! i have blowed my system and i ive tryed to restore with alive cd 1010 ..nothing happen,THEN with a 2009 version ,better but when i start i have a strange console saying :shgrub or rescue grub ,mostly i cant send any command ,the pianno don&#8217;t play all the letters proppely ..my question :do we have something to load before the live cd to make it work? a grub?linux ? if yes ,how do i empty ALL on  that computer to be sure there is nothing at all before the new setting THANKS from France and please to help you for some kind of help i can  O.</p></div><div
+class="comment_footer"> <a
+rel='nofollow' class='comment-reply-link' href='http://www.cyberciti.biz/tips/configure-ubuntu-grub-to-load-freebsd.html?replytocom=161559#commentform' onclick='return addComment.moveForm( "comment-body-161559", "161559", "commentform", "878" )' aria-label='Reply to oriantho'>Reply</a> <a
+class="comment_permalink" href="#comment-161559" title="permalink to this comment" rel="nofollow">Link</a></div></li></ul><div
+id="commentform"><form
+method="post" action="http://www.cyberciti.biz/tips/wp-comments-post.php"> <a
+rel="nofollow" id="cancel-comment-reply-link" href="/tips/configure-ubuntu-grub-to-load-freebsd.html#respond" style="display:none;">Cancel reply</a><p
+class="comment_form_title">Leave a Comment</p><p
+id="comment_form_name"> <label
+for="author">Name</label> <input
+type="text" id="author" class="input_text" name="author" value="" tabindex="1" /></p><p
+id="comment_form_email"> <label
+for="email">Email</label> <input
+type="text" id="email" class="input_text" name="email" value="" tabindex="2" /></p><p
+id="comment_form_comment"> <label
+for="comment">Comment</label><textarea name="comment" id="comment" class="input_text" tabindex="4" rows="6"></textarea></p><p
+id="comment_form_submit"> <input
+type="submit" id="submit" class="input_submit" name="submit" tabindex="5" value="Submit" /></p><p
+style="display: none;"><input
+type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ee664e64d7" /></p><p
+style="display: none;"><input
+type="hidden" id="ak_js" name="ak_js" value="143"/></p><input
+type='hidden' name='comment_post_ID' value='878' id='comment_post_ID' /> <input
+type='hidden' name='comment_parent' id='comment_parent' value='0' /></form></div> <br/><div
+style="font-size: 85%;">&nbsp;&nbsp; Tagged with: <a
+href="http://www.cyberciti.biz/tips/tag/bootgrubmenulst" rel="tag">/boot/grub/menu.lst</a>, <a
+href="http://www.cyberciti.biz/tips/tag/boot-image" rel="tag">boot image</a>, <a
+href="http://www.cyberciti.biz/tips/tag/bootloader" rel="tag">bootloader</a>, <a
+href="http://www.cyberciti.biz/tips/tag/bsd" rel="tag">bsd</a>, <a
+href="http://www.cyberciti.biz/tips/tag/centos" rel="tag">CentOS</a>, <a
+href="http://www.cyberciti.biz/tips/tag/configuration-file" rel="tag">configuration file</a>, <a
+href="http://www.cyberciti.biz/tips/tag/fedora" rel="tag">fedora</a>, <a
+href="http://www.cyberciti.biz/tips/tag/freebsd" rel="tag">FreeBSD</a>, <a
+href="http://www.cyberciti.biz/tips/tag/freebsd-70" rel="tag">freebsd 7.0</a>, <a
+href="http://www.cyberciti.biz/tips/tag/gedit" rel="tag">gedit</a>, <a
+href="http://www.cyberciti.biz/tips/tag/grub-boot-loader" rel="tag">grub boot loader</a>, <a
+href="http://www.cyberciti.biz/tips/tag/hard-disk" rel="tag">hard disk</a>, <a
+href="http://www.cyberciti.biz/tips/tag/kernel" rel="tag">kernel</a>, <a
+href="http://www.cyberciti.biz/tips/tag/linux" rel="tag">Linux</a>, <a
+href="http://www.cyberciti.biz/tips/tag/linux-grub" rel="tag">linux grub</a>, <a
+href="http://www.cyberciti.biz/tips/tag/partition-size" rel="tag">partition size</a>, <a
+href="http://www.cyberciti.biz/tips/tag/reboot" rel="tag">reboot</a>, <a
+href="http://www.cyberciti.biz/tips/tag/red-hat" rel="tag">red hat</a>, <a
+href="http://www.cyberciti.biz/tips/tag/root-device" rel="tag">root device</a>, <a
+href="http://www.cyberciti.biz/tips/tag/root-partition" rel="tag">root partition</a>, <a
+href="http://www.cyberciti.biz/tips/tag/ubuntu" rel="tag">ubuntu</a>, <a
+href="http://www.cyberciti.biz/tips/tag/ubuntu-linux" rel="tag">Ubuntu Linux</a></div></div><div
+class="prev_next"><p
+class="next_post">Next post: <a
+href="http://www.cyberciti.biz/tips/setup-ssh-to-run-on-a-non-standard-port.html" rel="next">Setup SSH to run on a non-standard port</a></p><p
+class="previous_post">Previous post: <a
+href="http://www.cyberciti.biz/tips/penetration-testing-security-password-auditing-for-unixlinux-systems.html" rel="prev">Penetration testing &#8211; security password auditing for UNIX / Linux systems</a></p></div></div><div
+class="sidebar"><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><div
+class="textwidget"><div
+id="bsap_1304534" class="bsarocks bsap_bccb43591680e039e32e874cbcc9e431"></div></div></div><div
+class="widget search-form" id="thesis-search-widget-5"><form
+class="search_form" method="get" action="http://www.cyberciti.biz/tips"><p> <input
+class="input_text" type="text" id="s" name="s" value="To search, type and hit enter" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" /> <input
+type="hidden" id="searchsubmit" value="Search" /></p></form></div><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><div
+class="textwidget"><center> <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px;"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3521177162"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </cener></div></div><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><p
+class="widget_title">Featured Articles:</p><div
+class="textwidget"><ul><li><a
+href="http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/">30 Cool Open Source Software I Discovered in 2013</a></li><li><a
+href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X</a></li><li><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html">25 PHP Security Best Practices For Sys Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html">Top 20 OpenSSH Server Best Security Practices </a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html">Top 20 Nginx WebServer Best Security Practices</a><li><A
+href="http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html">20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors</a><li><a
+href="http://www.cyberciti.biz/open-source/best-terminal-applications-for-linux-unix-macosx/">15 Greatest Open Source Terminal Applications Of 2012</a></li><li><a
+href="http://www.cyberciti.biz/tips/my-10-unix-command-line-mistakes.html">My 10 UNIX Command Line Mistakes</a></li><li><a
+href="http://www.cyberciti.biz/tips/open-source-project-management-software.html">Top 10 Open Source Web-Based Project Management Software</a></li><li><a
+href="http://www.cyberciti.biz/tips/download-email-client-for-linux-mac-osx-windows.html">Top 5 Email Client For Linux, Mac OS X, and Windows Users</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-laptop.html">The Novice Guide To Buying A Linux Laptop</a></li></ul></div></div><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><div
+class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:1057px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="6636490668"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><p
+class="widget_title">Don&#8217;t Miss Any Linux Tips</p><div
+class="textwidget"><form
+style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Nixcraft-LinuxFreebsdSolarisTipsTricks', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Get nixCraft in your inbox. It's free:</p><p><input
+onfocus="if(this.value=='Your email address') this.value='';" value="Your email address" type="text" style="width:140px" name="email"/></p><input
+type="hidden" value="Nixcraft-LinuxFreebsdSolarisTipsTricks" name="uri"/><input
+type="hidden" name="loc" value="en_US"/><input
+type="submit" value="Subscribe" /></form></div></div><div
+class="extendedwopts-show extendedwopts-desktop widget widget_text" id=""><div
+class="textwidget"><center> <ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="2272802261"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center></div></div></div></div><div
+class="footer"> &copy;2000-2016 nixCraft. All rights reserved. <a
+href="/tips/privacy">Privacy</a> - <a
+href="/tips/disclaimer">Terms of Service</a> - <a
+href="/tips/contact-us">Questions or Comments</a></div></div><div
+data-theiaStickySidebar-sidebarSelector='"#secondary, #sidebar, .sidebar, #primary"'
+data-theiaStickySidebar-options='{"containerSelector":"","additionalMarginTop":0,"additionalMarginBottom":0,"updateSidebarHeight":false,"minWidth":0,"sidebarBehavior":"stick-to-bottom","disableOnResponsiveLayouts":true}'></div><script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-content/plugins/akismet/_inc/form.js?ver=3.1.11'></script>
+<script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-includes/js/comment-reply.min.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-content/plugins/sidebar/js/theia-sticky-sidebar.js?ver=1.6.1'></script>
+<script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-content/plugins/sidebar/js/main.js?ver=1.6.1'></script>
+<script type='text/javascript' src='http://www.cyberciti.biz/tips/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+<script type="text/javascript">(function(d,g){d[g]||(d[g]=function(g){return this.querySelectorAll("."+g)},Element.prototype[g]=d[g])})(document,"getElementsByClassName");(function(){var classes = document.getElementsByClassName('menu_control');for (i = 0; i < classes.length; i++) {classes[i].onclick = function() {var menu = this.nextElementSibling;if (/show_menu/.test(menu.className))menu.className = menu.className.replace('show_menu', '').trim();else menu.className += ' show_menu';if (/menu_control_triggered/.test(this.className))this.className = this.className.replace('menu_control_triggered', '').trim();else this.className += ' menu_control_triggered';};}})();</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-108650-1']);
+  _gaq.push(['_setDomainName', 'www.cyberciti.biz']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

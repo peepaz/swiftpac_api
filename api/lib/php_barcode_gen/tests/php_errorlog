@@ -1,0 +1,4 @@
+[14-Jul-2016 03:33:21 CST6CDT] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/tests/BarcodeTest.php on line 4
+[05-Aug-2016 15:43:24 CST6CDT] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/tests/BarcodeTest.php on line 4
+[22-Sep-2016 12:35:18 CST6CDT] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/tests/BarcodeTest.php on line 4
+[06-Oct-2016 03:56:54 CST6CDT] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/tests/BarcodeTest.php on line 4

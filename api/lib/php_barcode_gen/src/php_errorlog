@@ -1,0 +1,8 @@
+[15-Jul-2016 16:43:48 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorJPG.php on line 6
+[15-Jul-2016 16:49:48 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorSVG.php on line 6
+[15-Jul-2016 16:52:48 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorPNG.php on line 7
+[15-Jul-2016 16:58:48 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorHTML.php on line 6
+[05-Aug-2016 09:13:42 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorSVG.php on line 6
+[09-Aug-2016 16:55:03 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorHTML.php on line 6
+[09-Aug-2016 16:57:41 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorJPG.php on line 6
+[11-Aug-2016 04:51:16 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\BarcodeGenerator' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/BarcodeGeneratorPNG.php on line 7

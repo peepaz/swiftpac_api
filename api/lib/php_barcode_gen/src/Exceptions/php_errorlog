@@ -1,0 +1,5 @@
+[15-Jul-2016 17:07:48 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\Exceptions\BarcodeException' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/Exceptions/InvalidFormatException.php on line 5
+[16-Jul-2016 08:21:52 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\Exceptions\BarcodeException' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/Exceptions/InvalidCheckDigitException.php on line 5
+[16-Jul-2016 08:30:10 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\Exceptions\BarcodeException' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/Exceptions/InvalidLengthException.php on line 5
+[16-Jul-2016 08:49:32 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\Exceptions\BarcodeException' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/Exceptions/InvalidCharacterException.php on line 5
+[16-Jul-2016 08:55:04 CST6CDT] PHP Fatal error:  Class 'Picqer\Barcode\Exceptions\BarcodeException' not found in /home/vincyavi/public_html/swiftpac_api/api/lib/php_barcode_gen/src/Exceptions/UnknownTypeException.php on line 5

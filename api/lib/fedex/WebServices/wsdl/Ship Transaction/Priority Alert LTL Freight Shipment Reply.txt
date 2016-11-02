@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><env:Header xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><soapenv:Body><v17:ProcessShipmentReply xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:v17="http://fedex.com/ws/ship/v17"><v17:HighestSeverity>ERROR</v17:HighestSeverity><v17:Notifications><v17:Severity>ERROR</v17:Severity><v17:Source>ship</v17:Source><v17:Code>8336</v17:Code><v17:Message>Service type not valid with commitment.</v17:Message><v17:LocalizedMessage>Service type not valid with commitment.</v17:LocalizedMessage></v17:Notifications><v17:Notifications><v17:Severity>WARNING</v17:Severity><v17:Source>ship</v17:Source><v17:Code>2469</v17:Code><v17:Message>shipTimestamp is invalid</v17:Message><v17:LocalizedMessage>shipTimestamp is invalid</v17:LocalizedMessage></v17:Notifications><m0:TransactionDetail xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:m0="http://fedex.com/ws/ship/v17">
+            <m0:CustomerTransactionId>IE_v17_Ship</m0:CustomerTransactionId>
+         </m0:TransactionDetail><m0:Version xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:m0="http://fedex.com/ws/ship/v17">
+            <m0:ServiceId>ship</m0:ServiceId>
+            <m0:Major>17</m0:Major>
+            <m0:Intermediate>0</m0:Intermediate>
+            <m0:Minor>0</m0:Minor>
+         </m0:Version></v17:ProcessShipmentReply></soapenv:Body></soapenv:Envelope>
